@@ -1,0 +1,9 @@
+[user]
+        email = zueger.peter@icloud.com
+        name = Peter Züger
+[core]
+        editor = emacs -nw
+[merge]
+        ff = false
+[push]
+        ff = true
