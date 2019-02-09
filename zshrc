@@ -37,6 +37,7 @@ export VISUAL=$EDITOR
 
 export LP_HOSTNAME_ALWAYS=1
 [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
+[[ $- = *i* ]] && source ~/.ssh-connect/ssh-connect.sh
 
 stty -ixon
 
