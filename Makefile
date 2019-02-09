@@ -18,6 +18,7 @@ backup:
 	$(MV) $(INSTDIR)/.zshrc                              $(BKUPDIR)/zshrc
 	$(MV) $(INSTDIR)/.gitconfig                          $(BKUPDIR)/gitconfig
 	$(MV) $(INSTDIR)/.Xdefaults                          $(BKUPDIR)/Xdefaults
+	$(MV) $(INSTDIR)/.config/liquidpromptrc              $(BKUPDIR)/liquidpromtrc
 	$(MV) $(INSTDIR)/.config/i3/config                   $(BKUPDIR)/config
 	$(MV) $(INSTDIR)/.config/i3/i3status.conf            $(BKUPDIR)/i3status.conf
 	$(MV) $(INSTDIR)/.config/i3/compton.conf             $(BKUPDIR)/compton.conf
@@ -28,6 +29,7 @@ restore:
 	$(CP) $(BKUPDIR)/zshrc            $(INSTDIR)/.zshrc
 	$(CP) $(BKUPDIR)/gitconfig        $(INSTDIR)/.gitconfig
 	$(CP) $(BKUPDIR)/Xdefaults        $(INSTDIR)/.Xdefaults
+	$(CP) $(BKUPDIR)/liquidpromptrc   $(INSTDIR)/.config/liquidpromptrc
 	$(CP) $(BKUPDIR)/config           $(INSTDIR)/.config/i3/config
 	$(CP) $(BKUPDIR)/i3status.conf    $(INSTDIR)/.config/i3/i3status.conf
 	$(CP) $(BKUPDIR)/compton.conf     $(INSTDIR)/.config/i3/compton.conf
@@ -41,6 +43,7 @@ install:
 	$(CP) zshrc            $(INSTDIR)/.zshrc
 	$(CP) gitconfig        $(INSTDIR)/.gitconfig
 	$(CP) Xdefaults        $(INSTDIR)/.Xdefaults
+	$(CP) liquidpromptrc   $(INSTDIR)/.config/liquidpromptrc
 	$(CP) config           $(INSTDIR)/.config/i3/config
 	$(CP) i3status.conf    $(INSTDIR)/.config/i3/i3status.conf
 	$(CP) compton.conf     $(INSTDIR)/.config/i3/compton.conf
@@ -51,6 +54,7 @@ update:
 	$(CP) -uv zshrc            $(INSTDIR)/.zshrc
 	$(CP) -uv gitconfig        $(INSTDIR)/.gitconfig
 	$(CP) -uv Xdefaults        $(INSTDIR)/.Xdefaults
+	$(CP) -uv liquidpromptrc   $(INSTDIR)/.config/liquidpromptrc
 	$(CP) -uv config           $(INSTDIR)/.config/i3/config
 	$(CP) -uv i3status.conf    $(INSTDIR)/.config/i3/i3status.conf
 	$(CP) -uv compton.conf     $(INSTDIR)/.config/i3/compton.conf
