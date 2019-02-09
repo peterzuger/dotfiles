@@ -32,6 +32,9 @@ restore:
 	$(CP) $(BKUPDIR)/compton.conf     ~/.config/i3/compton.conf
 
 install:
+	git clone --recursive https://github.com/gko/ssh-connect  ~/.ssh-connect
+	git clone https://github.com/nojhan/liquidprompt.git      ~/.liquidprompt
+	git clone https://gitlab.com/peterzuger/emacsd.git ~/.emacs.d
 	$(CP) 00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
 	$(CP) 20-intel.conf    /etc/X11/xorg.conf.d/20-intel.conf
 	$(CP) zshrc            ~/.zshrc
@@ -40,3 +43,13 @@ install:
 	$(CP) config           ~/.config/i3/config
 	$(CP) i3status.conf    ~/.config/i3/i3status.conf
 	$(CP) compton.conf     ~/.config/i3/compton.conf
+
+update:
+	$(CP) -uv 00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
+	$(CP) -uv 20-intel.conf    /etc/X11/xorg.conf.d/20-intel.conf
+	$(CP) -uv zshrc            ~/.zshrc
+	$(CP) -uv gitconfig        ~/.gitconfig
+	$(CP) -uv Xdefaults        ~/.Xdefaults
+	$(CP) -uv config           ~/.config/i3/config
+	$(CP) -uv i3status.conf    ~/.config/i3/i3status.conf
+	$(CP) -uv compton.conf     ~/.config/i3/compton.conf
