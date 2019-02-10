@@ -22,6 +22,7 @@ backup:
 	$(MV) $(INSTDIR)/.config/i3/config                   $(BKUPDIR)/config
 	$(MV) $(INSTDIR)/.config/i3/i3status.conf            $(BKUPDIR)/i3status.conf
 	$(MV) $(INSTDIR)/.config/i3/compton.conf             $(BKUPDIR)/compton.conf
+	$(MV) $(INSTDIR)/.local/bin                          $(BKUPDIR)/
 
 restore:
 	$(CP) $(BKUPDIR)/00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
@@ -33,6 +34,7 @@ restore:
 	$(CP) $(BKUPDIR)/config           $(INSTDIR)/.config/i3/config
 	$(CP) $(BKUPDIR)/i3status.conf    $(INSTDIR)/.config/i3/i3status.conf
 	$(CP) $(BKUPDIR)/compton.conf     $(INSTDIR)/.config/i3/compton.conf
+	$(CP) -r $(BKUPDIR)/bin           $(INSTDIR)/.local/
 
 install:
 	git clone --recursive https://github.com/gko/ssh-connect  $(INSTDIR)/.ssh-connect
@@ -47,6 +49,7 @@ install:
 	$(CP) config           $(INSTDIR)/.config/i3/config
 	$(CP) i3status.conf    $(INSTDIR)/.config/i3/i3status.conf
 	$(CP) compton.conf     $(INSTDIR)/.config/i3/compton.conf
+	$(CP) -r bin           $(INSTDIR)/.local/
 
 update:
 	$(CP) -uv 00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
@@ -58,3 +61,4 @@ update:
 	$(CP) -uv config           $(INSTDIR)/.config/i3/config
 	$(CP) -uv i3status.conf    $(INSTDIR)/.config/i3/i3status.conf
 	$(CP) -uv compton.conf     $(INSTDIR)/.config/i3/compton.conf
+	$(CP) -uvr bin             $(INSTDIR)/.local/
