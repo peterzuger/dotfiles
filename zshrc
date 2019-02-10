@@ -34,6 +34,7 @@ bindkey -e
 
 export EDITOR="emacs -nw"
 export VISUAL=$EDITOR
+export PATH="$PATH:$HOME/.local/bin/"
 
 [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
 [[ $- = *i* ]] && source ~/.ssh-connect/ssh-connect.sh
