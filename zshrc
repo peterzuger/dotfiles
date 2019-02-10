@@ -39,6 +39,14 @@ export PATH="$PATH:$HOME/.local/bin/"
 [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
 [[ $- = *i* ]] && source ~/.ssh-connect/ssh-connect.sh
 
+function countdown(){
+   date1=$((`date +%s` + $1));
+   while [ "$date1" -ge `date +%s` ]; do
+     echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
+     sleep 0.1
+   done
+}
+
 stty -ixon
 
 alias yy="mpv --really-quiet --volume=50 --autofit=30% --geometry=-10-15 --ytdl --ytdl-format='mp4[height<=?720]' -ytdl-raw-options=playlist-start=1"
