@@ -11,8 +11,9 @@ urxvt.keysym.C-equal:  font-size:reset
 urxvt.keysym.C-slash:  font-size:show
 urxvt.xftAntialias:    true
 urxvt.depth:           32
-urxvt.font: xft:Noto Sans Mono:style=Regular:pixelsize=14,\
-        xft:DejaVu Sans Mono:pixelsize=14
+urxvt.font: xft:DejaVu Sans Mono:style=Regular:pixelsize=14,\
+            xft:Noto Sans CJK JP:style=Regular:pixelsize=14,\
+            xft:Noto Sans Mono:style=Regular:pixelsize=14
 
 urxvt.background:     [20]#3f3f3f
 urxvt.foreground:         #dcdccc
