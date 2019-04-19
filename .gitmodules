@@ -4,3 +4,6 @@
 [submodule "HOME/.ssh-connect"]
 	path = HOME/.ssh-connect
 	url = https://github.com/gko/ssh-connect
+[submodule "HOME/.liquidprompt"]
+	path = HOME/.liquidprompt
+	url = https://github.com/nojhan/liquidprompt
