@@ -9,7 +9,7 @@ exec --no-startup-id compton --xrender-sync --xrender-sync-fence
 exec --no-startup-id feh --bg-fill /usr/share/Backgrounds/Background.png
 exec --no-startup-id udiskie -T -F
 exec --no-startup-id light-locker --lock-on-suspend
-exec --no-startup-id xautolock -time 5 -locker "light-locker-command -l"
+exec --no-startup-id xautolock -corners 0-00 -time 5 -locker "light-locker-command -l"
 for_window [class="^.*"] border pixel 0
 for_window [class="(?i)mpv"] floating enable
 gaps inner 5
