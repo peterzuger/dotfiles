@@ -25,6 +25,18 @@ This is a list of all things that have to be installed before installing these d
  [urxvt](http://rxvt.sourceforge.net/)                        | our extended virtual terminal
  [zsh](http://www.zsh.org/)                                   | shell
 
+## Archiving and Compression
+* [tar](https://www.gnu.org/software/tar/)
+* [rar](https://www.rarlab.com/)
+* [zip](http://infozip.sourceforge.net/Zip.html)
+* [7z](http://p7zip.sourceforge.net/)
+* [lzop](https://www.lzop.org/)
+* [gzip](https://www.gnu.org/software/gzip/)
+* [bzip2](http://www.sourceware.org/bzip2/)
+* [xz](https://tukaani.org/xz/)
+* [lzma](https://tukaani.org/xz/)
+* [unzip](http://infozip.sourceforge.net/UnZip.html)
+
 ## Auto Install
 All these will be automatically installed.
 
