@@ -1,3 +1,6 @@
 [submodule "HOME/.emacs.d"]
 	path = HOME/.emacs.d
 	url = git@gitlab.com:peterzuger/emacsd.git
+[submodule "HOME/.ssh-connect"]
+	path = HOME/.ssh-connect
+	url = https://github.com/gko/ssh-connect
