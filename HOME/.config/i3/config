@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-exec --no-startup-id compton --xrender-sync --xrender-sync-fence
+exec --no-startup-id compton
 exec --no-startup-id feh --bg-fill /usr/share/Backgrounds/Background.png
 exec --no-startup-id udiskie -T -F
 exec --no-startup-id light-locker --lock-on-suspend
