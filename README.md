@@ -8,21 +8,28 @@ This is a list of all things that have to be installed before installing these d
 
  Dependency                                                   | for
 --------------------------------------------------------------|------
+ [alsa-utils](https://www.alsa-project.org/wiki/Main_Page)    | audio settings
  [CMAKE](https://cmake.org/)                                  | [irony-mode](https://github.com/Sarcasm/irony-mode)
  [compton](https://github.com/chjj/compton)                   | A compositor for X11
  [dunst](https://github.com/dunst-project/dunst)              | Lightweight and customizable notification daemon
  [emacs](https://www.gnu.org/software/emacs/)                 | text editor
+ [feh](https://feh.finalrewind.org/)                          | image viewer
  [git](https://git-scm.com/)                                  | distributed version control
  [GNU stow](https://www.gnu.org/software/stow/stow.html)      | symlink farm manager
  [i3-gaps](https://github.com/Airblader/i3)                   | i3-gaps - i3 with more features
  [i3status](https://github.com/i3/i3status)                   | Generates status bar
  [libclang](http://clang.llvm.org/doxygen/group__CINDEX.html) | [irony-mode](https://github.com/Sarcasm/irony-mode)
+ [light-locker](https://github.com/the-cavalry/light-locker)  | screen locker
  [nano](https://www.nano-editor.org/)                         | Text Editor
  [rofi](https://github.com/davatorium/rofi)                   | A window switcher, application launcher
  [rofi-calc](https://github.com/svenstaro/rofi-calc)          | Do live calculations in rofi!
  [ranger](https://github.com/ranger/ranger)                   | A VIM-inspired filemanager for the console
  [screen](https://www.gnu.org/software/screen/)               | full-screen window manager
+ [scrot](https://tracker.debian.org/pkg/scrot)                | screenshots
+ [udiskie](https://github.com/coldfix/udiskie)                | automounter
  [urxvt](http://rxvt.sourceforge.net/)                        | our extended virtual terminal
+ [xautolock](http://ibiblio.org/pub/Linux/X11/screensavers/)  | screen locker
+ [xbacklight](https://xorg.freedesktop.org/wiki/)             | backlight software
  [zsh](http://www.zsh.org/)                                   | shell
 
 ## Archiving and Compression
