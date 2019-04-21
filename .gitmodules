@@ -7,3 +7,6 @@
 [submodule "HOME/.liquidprompt"]
 	path = HOME/.liquidprompt
 	url = https://github.com/nojhan/liquidprompt
+[submodule "HOME/.urxvt/modules/font-size"]
+	path = HOME/.urxvt/modules/font-size
+	url = https://github.com/majutsushi/urxvt-font-size
