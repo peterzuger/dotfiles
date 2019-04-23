@@ -36,8 +36,11 @@ export EDITOR="emacs -nw"
 export VISUAL=$EDITOR
 export PATH="$PATH:$HOME/.local/bin/"
 
-[[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
-[[ $- = *i* ]] && source ~/.ssh-connect/ssh-connect.sh
+if [[ $- == *i* ]]; then
+   [[ -e ~/.liquidprompt/liquidprompt  ]] && source ~/.liquidprompt/liquidprompt
+   [[ -e ~/.ssh-connect/ssh-connect.sh ]] && source ~/.ssh-connect/ssh-connect.sh
+   stty -ixon
+fi
 
 function countdown(){
    date1=$((`date +%s` + $1));
@@ -46,8 +49,6 @@ function countdown(){
      sleep 0.1
    done
 }
-
-stty -ixon
 
 alias yy="mpv --really-quiet --volume=50 --autofit=30% --geometry=-10-15 --ytdl --ytdl-format='mp4[height<=?720]' -ytdl-raw-options=playlist-start=1"
 alias webcam="mpv av://v4l2:/dev/video0"
