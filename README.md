@@ -78,3 +78,12 @@ Wait for the packages to install
 
 execute
 ```M-x irony-install-server```
+
+# Uninstallation
+To unstow the dotfiles.
+
+```
+make uninstall
+```
+
+This will not delete any files, it will just remove the symlinks.
