@@ -1,5 +1,3 @@
-INSTDIR ?= $(HOME)
-
 ifeq ($(VERBOSE),1)
 	Q =
 else
@@ -7,16 +5,20 @@ else
 endif
 
 MKDIR = $(Q)mkdir
-MV    = $(Q)mv
-CP    = $(Q)cp -i
 STOW  = $(Q)stow
-SUDO  = $(Q)sudo
 SSTOW = $(Q)sudo stow
 
-install:
+.PHONY: prepare
+prepare:
+	$(MKDIR) $(HOME)/.config
+	$(MKDIR) $(HOME)/.local
+
+.PHONY: install
+install: prepare
 	$(STOW) -t $(HOME) HOME
 	$(SSTOW) -t /etc/X11/xorg.conf.d xorg.conf.d
 
+.PHONY: uninstall
 uninstall:
 	$(STOW) --delete -t $(HOME) HOME
 	$(SSTOW) --delete -t /etc/X11/xorg.conf.d xorg.conf.d
