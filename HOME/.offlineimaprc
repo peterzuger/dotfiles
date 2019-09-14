@@ -1,0 +1,24 @@
+# Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
+# get started fast.
+
+[general]
+accounts = icloud
+
+[Account icloud]
+localrepository = Local
+remoterepository = Remote
+
+[Repository Local]
+type = Maildir
+localfolders = ~/Mail
+
+[Repository Remote]
+type			 = IMAP
+remotehost		 = imap.mail.me.com
+port                     = 993
+starttls		 = yes
+ssl			 = yes
+sslcacertfile            = /etc/ssl/certs/ca-certificates.crt
+remoteuser               = zueger.peter
+remotepassfile           = ~/.password.IMAP.icloud
+maxconnections           = 10
