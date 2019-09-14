@@ -13,11 +13,11 @@ type = Maildir
 localfolders = ~/Mail
 
 [Repository Remote]
-type			 = IMAP
-remotehost		 = imap.mail.me.com
+type                     = IMAP
+remotehost               = imap.mail.me.com
 port                     = 993
-starttls		 = yes
-ssl			 = yes
+starttls                 = yes
+ssl                      = yes
 sslcacertfile            = /etc/ssl/certs/ca-certificates.crt
 remoteuser               = zueger.peter
 remotepassfile           = ~/.password.IMAP.icloud
