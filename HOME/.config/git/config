@@ -3,6 +3,7 @@
         name = Peter Züger
 [core]
         editor = emacs -nw
+        pager = less
 [merge]
         ff = true
 [push]
