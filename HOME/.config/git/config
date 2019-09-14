@@ -12,3 +12,9 @@
         recurse = true
 [pull]
         ff = true
+[sendemail]
+        smtpencryption = tls
+        smtpserver     = smtp.mail.me.com
+        smtpuser       = zueger.peter@icloud.com
+        smtpserverport = 587
+        suppresscc     = self
