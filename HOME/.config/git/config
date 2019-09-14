@@ -8,3 +8,7 @@
         ff = true
 [push]
         ff = true
+[submodule]
+        recurse = true
+[pull]
+        ff = true
