@@ -12,9 +12,11 @@ URxvt.keysym.C-equal:  font-size:reset
 URxvt.keysym.C-slash:  font-size:show
 URxvt.xftAntialias:    true
 URxvt.depth:           32
+URxvt.letterSpace:     0
 URxvt.font: xft:DejaVu Sans Mono:style=Regular:pixelsize=14,\
             xft:Noto Sans CJK JP:style=Regular:pixelsize=14,\
-            xft:Noto Sans Mono:style=Regular:pixelsize=14
+            xft:Noto Sans Mono:style=Regular:pixelsize=14,\
+            xft:symbola:style=Regular:pixelsize=10:minspace=False
 
 URxvt.background:     [20]#3f3f3f
 URxvt.foreground:         #dcdccc
