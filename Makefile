@@ -4,7 +4,7 @@ else
 	Q = @
 endif
 
-MKDIR = $(Q)mkdir
+MKDIR = $(Q)mkdir -p
 STOW  = $(Q)stow
 SSTOW = $(Q)sudo stow
 

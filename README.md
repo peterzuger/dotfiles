@@ -25,12 +25,17 @@ This is a list of all things that have to be installed before installing these d
  [rofi-calc](https://github.com/svenstaro/rofi-calc)          | Do live calculations in rofi!
  [ranger](https://github.com/ranger/ranger)                   | A VIM-inspired filemanager for the console
  [screen](https://www.gnu.org/software/screen/)               | full-screen window manager
- [scrot](https://tracker.debian.org/pkg/scrot)                | screenshots
+ [maim](https://github.com/naelstrof/maim)                    | screenshots
  [udiskie](https://github.com/coldfix/udiskie)                | automounter
  [urxvt](http://rxvt.sourceforge.net/)                        | our extended virtual terminal
  [xautolock](http://ibiblio.org/pub/Linux/X11/screensavers/)  | screen locker
  [xbacklight](https://xorg.freedesktop.org/wiki/)             | backlight software
  [zsh](http://www.zsh.org/)                                   | shell
+ [offlineimap](http://www.offlineimap.org/)                   | E-Mail
+ [mu](https://www.djcbsoftware.nl/code/mu/)                   | E-Mail
+ [ctags](http://ctags.sourceforge.net/)                       | Source Code Tagging
+ [GNU Global](https://www.gnu.org/software/global/)           | Source Code Tagging
+ [TeXLive](http://tug.org/texlive/)                           | TeX
 
 ## Archiving and Compression
 * [tar](https://www.gnu.org/software/tar/)
