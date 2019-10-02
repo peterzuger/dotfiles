@@ -81,16 +81,6 @@ In that case backup these files and `make` again.
 
 There will be multiple Targets in the future for different Hardware configurations.
 
-## postinstall
-After the automatic installation is done, some more steps have to be executed.
-
-open emacs
-
-Wait for the packages to install
-
-execute
-```M-x irony-install-server```
-
 # Uninstallation
 To unstow the dotfiles.
 
