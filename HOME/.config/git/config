@@ -1,6 +1,7 @@
 [user]
         email = zueger.peter@icloud.com
         name = Peter Züger
+	signingkey = 197CFF4D74108CE1
 [core]
         editor = emacs -nw
         pager = less
