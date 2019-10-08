@@ -18,3 +18,6 @@
         smtpuser       = zueger.peter@icloud.com
         smtpserverport = 587
         suppresscc     = self
+[alias]
+	statistics = shortlog -s -n --all
+	contributors = ! git log --format='%aN' | sort -u
