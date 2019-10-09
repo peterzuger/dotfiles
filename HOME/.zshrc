@@ -33,6 +33,7 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 
 export EDITOR="emacs -nw"
+export PAGER=less
 export VISUAL=$EDITOR
 export PATH="$PATH:$HOME/.local/bin/"
 
@@ -58,3 +59,4 @@ alias ll="ls -lFh"    # list as list
 alias la="ls -aF"     # show all
 alias lla="ls -laFh"  # list all
 alias lS="ls -lFhS"   # list sort by file size
+alias emacs=$EDITOR
