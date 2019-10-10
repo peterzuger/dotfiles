@@ -13,5 +13,5 @@
 [pull]
         ff = true
 [alias]
-       statistics = shortlog -s -n --all
-       contributors = ! git log --format='%aN' | sort -u
+        statistics = shortlog -s -n --all
+        contributors = ! git log --format='%aN' | sort -u
