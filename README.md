@@ -156,9 +156,6 @@ If you are already using a Display Manager, this should not be done.
 sudo systemctl enable lightdm.service
 ```
 
-The i3 configuration expects the Wallpaper to be at: ```/usr/share/Backgrounds/Background.png```
-Place your Background image there.
-
 To install these dotfiles, just clone the repo, it does not need to
 be in any special folder, just put it where you like.
 The ```--recursive``` is **required**, otherwise the sub-repository's wont be downloaded.
