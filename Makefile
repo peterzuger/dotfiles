@@ -12,6 +12,7 @@ SSTOW = $(Q)sudo stow
 prepare:
 	$(MKDIR) $(HOME)/.config
 	$(MKDIR) $(HOME)/.local
+	$(MKDIR) $(HOME)/.gnupg
 
 .PHONY: install
 install: prepare
