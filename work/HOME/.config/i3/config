@@ -7,7 +7,7 @@
 
 exec --no-startup-id xautolock -detectsleep -corners 0-00 -time 5 -locker "i3lock -B=0"
 exec --no-startup-id feh --bg-fill $HOME/.local/share/Background.png
-exec --no-startup-id $HOME/.local/bin/xrandr-auto.sh && compton
+exec --no-startup-id $HOME/.local/bin/xrandr-auto && compton
 exec --no-startup-id udiskie -T -F
 for_window [class="^.*"] border pixel 0
 for_window [class="(?i)mpv"] floating enable
