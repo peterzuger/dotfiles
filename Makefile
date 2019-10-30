@@ -20,12 +20,20 @@ prepare:
 	$(MKDIR) $(HOME)/.local/share
 	$(MKDIR) $(HOME)/.gnupg
 
+.PHONY: common
+common: prepare
+	$(STOW) -t $(HOME) -d common HOME
+
+.PHONY: common-uninstall
+common-uninstall:
+	$(STOW) --delete -t $(HOME) -d common HOME
+
 .PHONY: $(INSTALL_TARGETS)
-$(INSTALL_TARGETS): prepare
+$(INSTALL_TARGETS): prepare common
 	$(STOW) -t $(HOME) -d $@ HOME
 	$(SSTOW) -t /etc/X11/xorg.conf.d -d $@ xorg.conf.d
 
 .PHONY: $(UNINSTALL_TARGETS)
-$(UNINSTALL_TARGETS):
+$(UNINSTALL_TARGETS): common-uninstall
 	$(STOW) --delete -t $(HOME) -d $(@:-uninstall=) HOME
 	$(SSTOW) --delete -t /etc/X11/xorg.conf.d -d $(@:-uninstall=) xorg.conf.d
