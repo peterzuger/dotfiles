@@ -147,11 +147,11 @@ sudo systemctl enable dhcpcd.service
 sudo systemctl enable NetworkManager.service
 ```
 
-When using lightdm, the lightdm service has to be activated.
+When using xdm, the xdm service has to be activated.
 If you are already using a Display Manager, this should not be done.
 
 ```
-sudo systemctl enable lightdm.service
+sudo systemctl enable xdm.service
 ```
 
 To install these dotfiles, just clone the repo, it does not need to
