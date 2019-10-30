@@ -1,3 +1,5 @@
+TARGETS = home
+
 ifeq ($(VERBOSE),1)
 	Q =
 else
@@ -8,6 +10,9 @@ MKDIR = $(Q)mkdir -p
 STOW  = $(Q)stow
 SSTOW = $(Q)sudo stow
 
+INSTALL_TARGETS   = $(TARGETS)
+UNINSTALL_TARGETS = $(TARGETS:=-uninstall)
+
 .PHONY: prepare
 prepare:
 	$(MKDIR) $(HOME)/.config
@@ -15,12 +20,12 @@ prepare:
 	$(MKDIR) $(HOME)/.local/share
 	$(MKDIR) $(HOME)/.gnupg
 
-.PHONY: install
-install: prepare
-	$(STOW) -t $(HOME) HOME
-	$(SSTOW) -t /etc/X11/xorg.conf.d xorg.conf.d
+.PHONY: $(INSTALL_TARGETS)
+$(INSTALL_TARGETS): prepare
+	$(STOW) -t $(HOME) -d $@ HOME
+	$(SSTOW) -t /etc/X11/xorg.conf.d -d $@ xorg.conf.d
 
-.PHONY: uninstall
-uninstall:
-	$(STOW) --delete -t $(HOME) HOME
-	$(SSTOW) --delete -t /etc/X11/xorg.conf.d xorg.conf.d
+.PHONY: $(UNINSTALL_TARGETS)
+$(UNINSTALL_TARGETS):
+	$(STOW) --delete -t $(HOME) -d $(@:-uninstall=) HOME
+	$(SSTOW) --delete -t /etc/X11/xorg.conf.d -d $(@:-uninstall=) xorg.conf.d
