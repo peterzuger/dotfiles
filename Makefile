@@ -18,6 +18,7 @@ prepare:
 	$(MKDIR) $(HOME)/.config
 	$(MKDIR) $(HOME)/.config/git
 	$(MKDIR) $(HOME)/.local
+	$(MKDIR) $(HOME)/.local/bin
 	$(MKDIR) $(HOME)/.local/share
 	$(MKDIR) $(HOME)/.gnupg
 
