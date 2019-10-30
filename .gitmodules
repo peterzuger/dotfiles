@@ -1,12 +1,24 @@
-[submodule "HOME/.emacs.d"]
-	path = home/HOME/.emacs.d
-	url = https://gitlab.com/peterzuger/emacsd
-[submodule "HOME/.ssh-connect"]
-	path = home/HOME/.ssh-connect
-	url = https://github.com/gko/ssh-connect
-[submodule "HOME/.liquidprompt"]
-	path = home/HOME/.liquidprompt
-	url = https://github.com/nojhan/liquidprompt
-[submodule "HOME/.urxvt/modules/font-size"]
-	path = home/HOME/.urxvt/modules/font-size
-	url = https://github.com/majutsushi/urxvt-font-size
+[submodule "home/HOME/.emacs.d"]
+        path = home/HOME/.emacs.d
+        url = https://gitlab.com/peterzuger/emacsd
+[submodule "home/HOME/.ssh-connect"]
+        path = home/HOME/.ssh-connect
+        url = https://github.com/gko/ssh-connect
+[submodule "home/HOME/.liquidprompt"]
+        path = home/HOME/.liquidprompt
+        url = https://github.com/nojhan/liquidprompt
+[submodule "home/HOME/.urxvt/modules/font-size"]
+        path = home/HOME/.urxvt/modules/font-size
+        url = https://github.com/majutsushi/urxvt-font-size
+[submodule "work/HOME/.emacs.d"]
+        path = work/HOME/.emacs.d
+        url = https://gitlab.com/peterzuger/emacsd
+[submodule "work/HOME/.ssh-connect"]
+        path = work/HOME/.ssh-connect
+        url = https://github.com/gko/ssh-connect
+[submodule "work/HOME/.liquidprompt"]
+        path = work/HOME/.liquidprompt
+        url = https://github.com/nojhan/liquidprompt
+[submodule "work/HOME/.urxvt/modules/font-size"]
+        path = work/HOME/.urxvt/modules/font-size
+        url = https://github.com/majutsushi/urxvt-font-size

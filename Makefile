@@ -1,4 +1,4 @@
-TARGETS = home
+TARGETS = home work
 
 ifeq ($(VERBOSE),1)
 	Q =
