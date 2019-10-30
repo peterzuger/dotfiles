@@ -33,12 +33,10 @@
 This Repository contains the configuration of all of my computers,
 this allows me to quickly and painlessly setup a new machine in under 30 minutes.
 
-At the moment every machine gets its own branch, but I would like to change that in the future.
+For each of my machines there is a make target.
 
-The best setup would be a common folder, with all the configurations that are the same across all my machines,
-and a folder for every machine that contains the machine specific settings.
-But I haven't had the time to implement that.
-
+At the moment that is ```home``` and ```work```, there is also a ```common``` target,
+that installs all configurations that are common across all my machines.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of my dotfiles up and running on your local machine.
@@ -165,10 +163,10 @@ git clone --recursive https://gitlab.com/peterzuger/dotfiles.git
 cd dotfiles
 ```
 
-now that you have all the sources, just ```make```!
+now that you have all the sources, just ```make home```!
 
 ```
-make
+make home
 ```
 make will deploy all dotfiles with [stow](https://www.gnu.org/software/stow/).
 This tool just creates symbolic links for all files, it will not override
@@ -179,7 +177,7 @@ any files when doing so and just fails if it can't create a link.
 To unstow the dotfiles.
 
 ```
-make uninstall
+make home-uninstall
 ```
 
 This will not delete any files, it will just remove the symlinks.
