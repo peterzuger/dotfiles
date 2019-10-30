@@ -16,6 +16,7 @@ UNINSTALL_TARGETS = $(TARGETS:=-uninstall)
 .PHONY: prepare
 prepare:
 	$(MKDIR) $(HOME)/.config
+	$(MKDIR) $(HOME)/.config/git
 	$(MKDIR) $(HOME)/.local
 	$(MKDIR) $(HOME)/.local/share
 	$(MKDIR) $(HOME)/.gnupg
