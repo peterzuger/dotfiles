@@ -25,10 +25,12 @@ prepare:
 .PHONY: common
 common: prepare
 	$(STOW) -t $(HOME) -d common HOME
+	$(SSTOW) -t /etc/X11/xorg.conf.d -d common xorg.conf.d
 
 .PHONY: common-uninstall
 common-uninstall:
 	$(STOW) --delete -t $(HOME) -d common HOME
+	$(SSTOW) --delete -t /etc/X11/xorg.conf.d -d common xorg.conf.d
 
 .PHONY: $(INSTALL_TARGETS)
 $(INSTALL_TARGETS): prepare common
