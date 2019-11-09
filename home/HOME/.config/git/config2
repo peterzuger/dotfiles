@@ -1,16 +1,9 @@
 [user]
         email = zueger.peter@icloud.com
-        name = Peter Züger
         signingkey = 197CFF4D74108CE1
-[core]
-        editor = emacs -nw
-        pager = less
 [sendemail]
         smtpencryption = tls
         smtpserver     = smtp.mail.me.com
         smtpuser       = zueger.peter@icloud.com
         smtpserverport = 587
         suppresscc     = self
-[alias]
-        statistics = shortlog -s -n --all
-        contributors = ! git log --format='%aN' | sort -u
