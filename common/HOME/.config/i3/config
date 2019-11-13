@@ -8,6 +8,7 @@
 exec --no-startup-id compton
 exec --no-startup-id feh --bg-fill $HOME/.local/share/Background.png
 exec --no-startup-id udiskie -T -F
+exec --no-startup-id dunst
 exec --no-startup-id xautolock -detectsleep -corners 0-00 -time 5 -locker "i3lock -B=0 -k"
 for_window [class="^.*"] border pixel 0
 for_window [class="(?i)mpv"] floating enable
