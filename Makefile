@@ -22,13 +22,21 @@ prepare:
 	$(MKDIR) $(HOME)/.local/share
 	$(MKDIR) $(HOME)/.gnupg
 
+.PHONY: headless
+headless: prepare
+	$(STOW) -t $(HOME) -d headless HOME
+
+.PHONY: headless-uninstall
+headless-uninstall:
+	$(STOW) --delete -t $(HOME) -d headless HOME
+
 .PHONY: common
-common: prepare
+common: headless
 	$(STOW) -t $(HOME) -d common HOME
 	$(SSTOW) -t /etc/X11/xorg.conf.d -d common xorg.conf.d
 
 .PHONY: common-uninstall
-common-uninstall:
+common-uninstall: headless-uninstall
 	$(STOW) --delete -t $(HOME) -d common HOME
 	$(SSTOW) --delete -t /etc/X11/xorg.conf.d -d common xorg.conf.d
 
