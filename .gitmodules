@@ -1,9 +1,9 @@
 [submodule "common/HOME/.liquidprompt"]
-	path = headless/HOME/.liquidprompt
-	url = https://github.com/nojhan/liquidprompt
+        path = headless/HOME/.liquidprompt
+        url = https://github.com/nojhan/liquidprompt.git
 [submodule "common/HOME/.ssh-connect"]
-	path = headless/HOME/.ssh-connect
-	url = https://github.com/gko/ssh-connect
+        path = headless/HOME/.ssh-connect
+        url = https://github.com/gko/ssh-connect.git
 [submodule "common/HOME/.emacs.d"]
-	path = common/HOME/.emacs.d
-	url = https://gitlab.com/peterzuger/emacsd
+        path = common/HOME/.emacs.d
+        url = https://gitlab.com/peterzuger/emacsd.git
