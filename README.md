@@ -39,11 +39,18 @@ At the moment that is ```home``` and ```work```, there is also a ```common``` ta
 that installs all configurations that are common across all my machines.
 
 For headless machines, like servers or raspberrypi's there is also the `headless` target.
-The minimal usage of the headless target requires `git` and `zsh`, `zsh` must be enabled with `chsh`.
+The minimal usage of the headless target requires `git`,`stow` and `zsh`, `zsh` must be enabled with `chsh`.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of my dotfiles up and running on your local machine.
 
+### CentOS
+On CentOS `gnu stow` is not in the default repository's, to install it add the `epel-release` repo.
+
+```
+sudo yum install epel-release
+sudo yum install stow
+```
 
 ### Prerequisites
 Following Prerequisites must be installed from here: [Arch Packages](https://www.archlinux.org/packages/)
