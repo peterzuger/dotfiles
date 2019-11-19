@@ -38,6 +38,9 @@ For each of my machines there is a make target.
 At the moment that is ```home``` and ```work```, there is also a ```common``` target,
 that installs all configurations that are common across all my machines.
 
+For headless machines, like servers or raspberrypi's there is also the `headless` target.
+The minimal usage of the headless target requires `git` and `zsh`, `zsh` must be enabled with `chsh`.
+
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of my dotfiles up and running on your local machine.
 
