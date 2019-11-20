@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img height=200px src="https://www.archlinux.org/static/logos/archlinux-logo-dark-1200dpi.b42bd35d5916.png" alt="Arch Linux"></a>
+ <img height=200px src="doc/dotfiles.png" alt="Arch Linux"></a>
 </p>
 
 <h3 align="center">dotfiles</h3>
@@ -194,7 +194,7 @@ This will not delete any files, it will just remove the symlinks.
 
 
 ## 🎈 Usage <a name="usage"></a>
-![screenshot](https://gitlab.com/peterzuger/dotfiles/raw/master/doc/screenshot01.png)
+![screenshot](doc/screenshot01.png)
 
 
 ### Global Keybindings
