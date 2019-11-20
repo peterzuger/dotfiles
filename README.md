@@ -1,7 +1,4 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img height=200px src="doc/dotfiles.png" alt="Arch Linux"></a>
-</p>
+<p align="center"><img src="doc/dotfiles.png" alt="~/.*"></p>
 
 <h3 align="center">dotfiles</h3>
 
