@@ -50,6 +50,10 @@ bindkey . rationalise-dot
 # without this, typing a . aborts incremental history search
 bindkey -M isearch . self-insert
 
+function ydl(){
+    youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 $1
+}
+
 export EDITOR="emacs -nw"
 export PAGER=less
 export VISUAL=$EDITOR
