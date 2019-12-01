@@ -58,9 +58,9 @@ xlogin*shdColor: black
 xlogin*hiColor: black
 #endif
 #if PLANES >= 8
-xlogin*logoFileName: /usr/share/xdm/pixmaps/xorg.xpm
+#xlogin*logoFileName: /usr/share/xdm/pixmaps/xorg.xpm
 #else
-xlogin*logoFileName: /usr/share/xdm/pixmaps/xorg-bw.xpm
+#xlogin*logoFileName: /usr/share/xdm/pixmaps/xorg-bw.xpm
 #endif
 xlogin*useShape: true
 xlogin*logoPadding: 10
