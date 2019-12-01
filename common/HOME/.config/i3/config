@@ -6,7 +6,7 @@
 #
 
 exec --no-startup-id picom
-exec --no-startup-id feh --bg-fill $HOME/.local/share/Background.png
+exec --no-startup-id feh --bg-fill $HOME/.local/share/T580_Arch.png
 exec --no-startup-id udiskie -T -F
 exec --no-startup-id dunst
 exec --no-startup-id xautolock -detectsleep -corners 0-00 -time 5 -locker "i3lock -k -B=0 --insidevercolor=808080FF --insidewrongcolor=FF0000FF --insidecolor=40404080 --ringvercolor=7F9F7FFF --ringwrongcolor=FF0000FF --ringcolor=7F9F7FFF --linecolor=000000FF --keyhlcolor=000000FF --bshlcolor=000000FF --separatorcolor=000000FF --verifcolor=F6F3E8FF --wrongcolor=FF0000FF --timecolor=F6F3E8FF --datecolor=F6F3E8FF --indicator --radius=100"
