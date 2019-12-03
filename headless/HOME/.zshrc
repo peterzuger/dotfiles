@@ -60,8 +60,8 @@ export VISUAL=$EDITOR
 export PATH="$PATH:$HOME/.local/bin/"
 
 if [[ $- == *i* ]]; then
-   [[ -e ~/.liquidprompt/liquidprompt  ]] && source ~/.liquidprompt/liquidprompt
-   [[ -e ~/.ssh-connect/ssh-connect.sh ]] && source ~/.ssh-connect/ssh-connect.sh
+   [[ -e ~/.zsh/liquidprompt/liquidprompt  ]] && source ~/.zsh/liquidprompt/liquidprompt
+   [[ -e ~/.zsh/ssh-connect/ssh-connect.sh ]] && source ~/.zsh/ssh-connect/ssh-connect.sh
    stty -ixon
 fi
 
