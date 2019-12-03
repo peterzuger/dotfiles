@@ -62,6 +62,7 @@ export PATH="$PATH:$HOME/.local/bin/"
 if [[ $- == *i* ]]; then
    [[ -e ~/.zsh/liquidprompt/liquidprompt  ]] && source ~/.zsh/liquidprompt/liquidprompt
    [[ -e ~/.zsh/ssh-connect/ssh-connect.sh ]] && source ~/.zsh/ssh-connect/ssh-connect.sh
+   [[ -e ~/.zsh/newsfeed.sh ]] && source ~/.zsh/newsfeed.sh
    stty -ixon
 fi
 
