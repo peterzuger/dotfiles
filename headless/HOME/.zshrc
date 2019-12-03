@@ -59,6 +59,9 @@ export PAGER=less
 export VISUAL=$EDITOR
 export PATH="$PATH:$HOME/.local/bin/"
 
+# expicitly set feed bookmarks to different directory
+export FEED_BOOKMARKS=$HOME/.zsh/newsfeed
+
 if [[ $- == *i* ]]; then
    [[ -e ~/.zsh/liquidprompt/liquidprompt  ]] && source ~/.zsh/liquidprompt/liquidprompt
    [[ -e ~/.zsh/ssh-connect/ssh-connect.sh ]] && source ~/.zsh/ssh-connect/ssh-connect.sh
