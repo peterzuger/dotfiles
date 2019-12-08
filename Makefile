@@ -9,9 +9,12 @@ endif
 MKDIR = $(Q)mkdir -p
 STOW  = $(Q)stow
 SSTOW = $(Q)sudo stow
+ECHO  = @echo
 
 INSTALL_TARGETS   = $(TARGETS)
 UNINSTALL_TARGETS = $(TARGETS:=-uninstall)
+
+all: help
 
 .PHONY: prepare
 prepare:
@@ -50,3 +53,12 @@ $(INSTALL_TARGETS): prepare common
 $(UNINSTALL_TARGETS): common-uninstall
 	$(STOW) --delete -t $(HOME) -d $(@:-uninstall=) HOME
 	$(SSTOW) --delete -t /etc -d $(@:-uninstall=) etc
+
+.PHONY: help
+help:
+	$(ECHO) 'use make "target"'
+	$(ECHO) 'targets:'
+	$(ECHO) '  headless(-uninstall)'
+	$(ECHO) '  common(-uninstall)'
+	$(ECHO) '  home(-uninstall)'
+	$(ECHO) '  work(-uninstall)'
