@@ -25,6 +25,7 @@ prepare:
 	$(MKDIR) $(HOME)/.local/share
 	$(MKDIR) $(HOME)/.gnupg
 	$(MKDIR) $(HOME)/.ssh
+	$(MKDIR) $(HOME)/.zsh
 
 .PHONY: headless
 headless: prepare
