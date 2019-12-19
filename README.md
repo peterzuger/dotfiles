@@ -32,7 +32,7 @@ this allows me to quickly and painlessly setup a new machine in under 30 minutes
 
 For each of my machines there is a make target.
 
-At the moment that is ```home```, there is also a ```common``` target,
+At the moment that is `home`, there is also a `common` target,
 that installs all configurations that are common across all my machines.
 
 For headless machines, like servers or raspberrypi's there is also the `headless` target.
@@ -158,14 +158,14 @@ sudo systemctl enable xdm.service
 
 To install these dotfiles, just clone the repo, it does not need to
 be in any special folder, just put it where you like.
-The ```--recursive``` is **required**, otherwise the sub-repository's wont be downloaded.
+The `--recursive` is **required**, otherwise the sub-repository's wont be downloaded.
 
 ```
 git clone --recursive https://gitlab.com/peterzuger/dotfiles.git
 cd dotfiles
 ```
 
-now that you have all the sources, just ```make home```!
+now that you have all the sources, just `make home`!
 
 ```
 make home
