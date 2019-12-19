@@ -1,4 +1,4 @@
-TARGETS = home work
+TARGETS = home
 
 ifeq ($(VERBOSE),1)
 	Q =
@@ -62,4 +62,3 @@ help:
 	$(ECHO) '  headless(-uninstall)'
 	$(ECHO) '  common(-uninstall)'
 	$(ECHO) '  home(-uninstall)'
-	$(ECHO) '  work(-uninstall)'
