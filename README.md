@@ -174,6 +174,14 @@ make will deploy all dotfiles with [stow](https://www.gnu.org/software/stow/).
 This tool just creates symbolic links for all files, it will not override
 any files when doing so and just fails if it can't create a link.
 
+Once the files are deployed, the grub config can be regenerated,
+for this you must first place the [breeze](https://github.com/gustawho/grub2-theme-breeze)
+grub theme in `/boot/grub/themes/breeze`.
+
+Then you can regenerate the grub config: (using the correct path if this is not correct)
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 ### Uninstalling
 To unstow the dotfiles.
