@@ -144,6 +144,7 @@ exit
 ```
 
 For connecting with the internet I use dhcpcd and nmtui(networkmanager).
+
 ```
 sudo systemctl enable dhcpcd.service
 sudo systemctl enable NetworkManager.service
@@ -170,6 +171,7 @@ now that you have all the sources, just `make home`!
 ```
 make home
 ```
+
 make will deploy all dotfiles with [stow](https://www.gnu.org/software/stow/).
 This tool just creates symbolic links for all files, it will not override
 any files when doing so and just fails if it can't create a link.
@@ -179,6 +181,7 @@ for this you must first place the [breeze](https://github.com/gustawho/grub2-the
 grub theme in `/boot/grub/themes/breeze`.
 
 Then you can regenerate the grub config: (using the correct path if this is not correct)
+
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
