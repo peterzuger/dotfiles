@@ -1,4 +1,4 @@
-TARGETS = home virtualbox
+TARGETS = home arch-virtualbox
 
 ifeq ($(VERBOSE),1)
 	Q =
