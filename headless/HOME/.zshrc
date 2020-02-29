@@ -78,7 +78,6 @@ function countdown(){
 }
 
 alias yy="mpv --really-quiet --volume=50 --autofit=30% --geometry=-10-15 --ytdl --ytdl-format='mp4[height<=?720]' -ytdl-raw-options=playlist-start=1"
-alias webcam="mpv av://v4l2:/dev/video0"
 
 alias ls="ls --color=always"
 alias ll="ls -lFh"    # list as list
