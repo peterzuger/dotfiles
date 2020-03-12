@@ -15,6 +15,8 @@ gaps inner 5
 gaps outer 5
 smart_gaps on
 
+bindsym $mod+U                exec --no-startup-id udiskie-umount -a
+
 bindsym XF86AudioMute         exec --no-startup-id amixer -q set Master toggle
 bindsym XF86AudioLowerVolume  exec --no-startup-id amixer -q set Master 2dB- unmute
 bindsym XF86AudioRaiseVolume  exec --no-startup-id amixer -q set Master 2dB+ unmute
