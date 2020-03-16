@@ -6,4 +6,4 @@
         url = https://github.com/gko/ssh-connect.git
 [submodule "common/HOME/.emacs.d"]
         path = common/HOME/.emacs.d
-        url = https://gitlab.com/peterzuger/emacsd.git
+        url = https://github.com/peterzuger/.emacs.d.git
