@@ -1,0 +1,3 @@
+hardstatus alwayslastline
+
+hardstatus string '%{= kG}[%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{= kG}]'
