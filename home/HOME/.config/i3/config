@@ -27,7 +27,7 @@ bindsym XF86AudioMicMute      exec --no-startup-id amixer -q set Capture toggle
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight - 10
 bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight + 10
 #bindsym XF86Display
-bindsym XF86WLAN              exec --no-startup-id true
+#bindsym XF86WLAN
 #bindsym XF86Tools
 #bindsym XF86Bluetooth
 bindsym XF86Calculator        exec --no-startup-id rofi -show calc
