@@ -1,6 +1,6 @@
 [user]
         email = zueger.peter@icloud.com
-        signingkey = 197CFF4D74108CE1
+        signingkey = E2F2FEEBF09A9040
 [sendemail]
         smtpencryption = tls
         smtpserver     = smtp.mail.me.com
