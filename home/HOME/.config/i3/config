@@ -37,6 +37,7 @@ bindsym XF86Calculator        exec --no-startup-id rofi -show calc
 bindsym --release Print            exec --no-startup-id maim $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
 bindsym --release $mod+Print       exec --no-startup-id maim -i $(xdotool getactivewindow) $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
 bindsym --release $mod+Shift+Print exec --no-startup-id maim -d 0.05 --quiet -s $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym --release Shift+Print      exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"
 
 # i3 config file (v4)
 #
