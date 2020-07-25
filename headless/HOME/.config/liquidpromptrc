@@ -133,7 +133,7 @@ LP_RUNTIME_THRESHOLD=2
 # Ring the terminal bell if the runtime of the previous command exceeded
 # LP_RUNTIME_BELL_THRESHOLD
 # Recommended value is 0
-LP_ENABLE_RUNTIME_BELL=0
+LP_ENABLE_RUNTIME_BELL=1
 
 # Minimal runtime (in seconds) before the terminal bell will be rung.
 # Recommended value is 10
