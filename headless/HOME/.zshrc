@@ -63,6 +63,7 @@ if [[ $- == *i* ]]; then
    [[ -e ~/.zsh/liquidprompt/liquidprompt  ]] && source ~/.zsh/liquidprompt/liquidprompt
    [[ -e ~/.zsh/ssh-connect/ssh-connect.sh ]] && source ~/.zsh/ssh-connect/ssh-connect.sh
    [[ -e ~/.zsh/newsfeed.sh ]] && source ~/.zsh/newsfeed.sh
+   [[ -e ~/.zsh/zsh-insulter/src/zsh.command-not-found ]] && source ~/.zsh/zsh-insulter/src/zsh.command-not-found
    stty -ixon
 fi
 
