@@ -8,5 +8,5 @@
         path = common/HOME/.emacs.d
         url = https://github.com/peterzuger/.emacs.d.git
 [submodule "headless/HOME/zsh-insulter"]
-        path = headless/HOME/zsh-insulter
+        path = headless/HOME/.zsh/zsh-insulter
         url = https://github.com/matmutant/zsh-insulter.git
