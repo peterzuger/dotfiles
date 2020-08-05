@@ -171,6 +171,12 @@ If you are already using a Display Manager, this should not be done.
 sudo systemctl enable xdm.service
 ```
 
+To have the ability to lock your screen enable the xautolock service.
+
+```
+systemctl --user enable xautolock.service
+```
+
 To install these dotfiles, just clone the repo, it does not need to
 be in any special folder, just put it where you like.
 The `--recursive` is **required**, otherwise the sub-repository's wont be downloaded.
