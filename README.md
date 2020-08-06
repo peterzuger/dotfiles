@@ -171,12 +171,6 @@ If you are already using a Display Manager, this should not be done.
 sudo systemctl enable xdm.service
 ```
 
-To have the ability to lock your screen enable the xautolock service.
-
-```
-systemctl --user enable xautolock.service
-```
-
 To install these dotfiles, just clone the repo, it does not need to
 be in any special folder, just put it where you like.
 The `--recursive` is **required**, otherwise the sub-repository's wont be downloaded.
@@ -204,6 +198,13 @@ Then you can regenerate the grub config: (using the correct path if this is not 
 
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+There are still a few services that can be enabled to provide some additional functionality:
+To enable them all use:
+
+```
+systemctl --user enable dunst.service picom.service udiskie.service xautolock.service
 ```
 
 ### Uninstalling
