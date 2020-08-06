@@ -9,4 +9,4 @@ Restart=on-failure
 RestartSec=10
 
 [Install]
-WantedBy=graphical.target
+WantedBy=default.target
