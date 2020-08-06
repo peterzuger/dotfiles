@@ -1,4 +1,6 @@
 set boldtext
+set mouse
+set linenumbers
 include /usr/share/nano/asm.nanorc
 include /usr/share/nano/fortran.nanorc
 include /usr/share/nano/man.nanorc
