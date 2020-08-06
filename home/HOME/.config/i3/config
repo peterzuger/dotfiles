@@ -5,10 +5,8 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-exec --no-startup-id picom
 exec --no-startup-id feh --bg-fill $HOME/.local/share/T580_Arch.png
-exec --no-startup-id udiskie -T -F
-exec --no-startup-id dunst
+
 for_window [class="^.*"] border pixel 0
 for_window [class="(?i)mpv"] floating enable
 gaps inner 5
