@@ -1,10 +1,10 @@
 [Unit]
-Description=picom
+Description=udiskie
 
 [Service]
 Type=simple
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/picom
+ExecStart=/usr/bin/udiskie -F
 Restart=on-failure
 RestartSec=10
 
