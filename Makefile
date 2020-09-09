@@ -30,10 +30,12 @@ prepare:
 .PHONY: headless
 headless: prepare
 	$(STOW) -t $(HOME) -d headless HOME
+	$(SSTOW) -t /etc -d headless etc
 
 .PHONY: headless-uninstall
 headless-uninstall:
 	$(STOW) --delete -t $(HOME) -d headless HOME
+	$(SSTOW) --delete -t /etc -d headless etc
 
 .PHONY: common
 common: headless
