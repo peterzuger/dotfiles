@@ -8,5 +8,6 @@
         contributors = ! git log --format='%aN' | sort -u
 [include]
         path = ext_config
+        path = mail_config
 [pull]
-	ff = only
+        ff = only
