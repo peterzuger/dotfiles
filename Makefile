@@ -20,6 +20,8 @@ all: help
 prepare:
 	$(MKDIR) $(HOME)/.config
 	$(MKDIR) $(HOME)/.config/git
+	$(MKDIR) $(HOME)/.config/systemd
+	$(MKDIR) $(HOME)/.config/systemd/user
 	$(MKDIR) $(HOME)/.local
 	$(MKDIR) $(HOME)/.local/bin
 	$(MKDIR) $(HOME)/.local/share
