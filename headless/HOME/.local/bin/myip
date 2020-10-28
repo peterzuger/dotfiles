@@ -1,10 +1,29 @@
 #!/bin/bash
 
-curl --silent https://canihazip.com/s
-#curl ipinfo.io/ip
-#curl icanhazip.com
-#curl curlmyip.net
-#curl ipecho.net/plain
-#curl ifconfig.pro
-#curl ident.me
-#curl ipaddr.site
+if curl --fail --silent ipinfo.io/ip; then
+    exit 0
+fi
+
+if curl --fail --silent icanhazip.com; then
+    exit 0
+fi
+
+if curl --fail --silent curlmyip.net; then
+    exit 0
+fi
+
+if curl --fail --silent ipecho.net/plain; then
+    exit 0
+fi
+
+if curl --fail --silent ifconfig.pro; then
+    exit 0
+fi
+
+if curl --fail --silent ident.me; then
+    exit 0
+fi
+
+if curl --fail --silent ipaddr.site; then
+    exit 0
+fi
