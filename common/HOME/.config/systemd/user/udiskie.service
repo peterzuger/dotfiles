@@ -4,7 +4,7 @@ Description=udiskie
 [Service]
 Type=simple
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/udiskie -F
+ExecStart=/usr/bin/udiskie --no-file-manager
 Restart=on-failure
 RestartSec=10
 

@@ -15,7 +15,7 @@ smart_gaps on
 
 bindsym $mod+L                exec --no-startup-id xautolock -locknow
 
-bindsym $mod+U                exec --no-startup-id udiskie-umount -a
+bindsym $mod+U                exec --no-startup-id udiskie-umount --all
 
 bindsym XF86AudioMute         exec --no-startup-id amixer -q set Master toggle
 bindsym XF86AudioLowerVolume  exec --no-startup-id amixer -q set Master 2dB- unmute
@@ -32,9 +32,9 @@ bindsym XF86Calculator        exec --no-startup-id rofi -show calc
 # Fn-F12 ?
 #bindsym XF86Sleep
 bindsym --release Print            exec --no-startup-id maim $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
-bindsym --release $mod+Print       exec --no-startup-id maim -i $(xdotool getactivewindow) $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
-bindsym --release $mod+Shift+Print exec --no-startup-id maim -d 0.05 --quiet -s $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
-bindsym --release Shift+Print      exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"
+bindsym --release $mod+Print       exec --no-startup-id maim --window=$(xdotool getactivewindow) $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym --release $mod+Shift+Print exec --no-startup-id maim --delay=0.05 --quiet --select $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym --release Shift+Print      exec --no-startup-id "maim --select | xclip -selection clipboard -t image/png"
 
 # i3 config file (v4)
 #

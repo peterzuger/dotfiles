@@ -51,7 +51,7 @@ bindkey . rationalise-dot
 bindkey -M isearch . self-insert
 
 
-export EDITOR="emacs -nw"
+export EDITOR="emacs --no-window-system"
 export PAGER=less
 export VISUAL=$EDITOR
 export PATH="$PATH:$HOME/.local/bin/"

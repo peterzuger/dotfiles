@@ -1,9 +1,9 @@
 [core]
-        editor = emacs -nw
+        editor = emacs --no-window-system
         pager = less
 [alias]
-        statistics = shortlog -s -n --all
-        contributors = ! git log --format='%aN' | sort -u
+        statistics = shortlog --summary --numbered --all
+        contributors = ! git log --format='%aN' | sort --unique
 [include]
         path = ext_config
         path = mail_config

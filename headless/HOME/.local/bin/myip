@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -s https://canihazip.com/s
+curl --silent https://canihazip.com/s
 #curl ipinfo.io/ip
 #curl icanhazip.com
 #curl curlmyip.net
