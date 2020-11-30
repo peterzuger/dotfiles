@@ -52,67 +52,58 @@ sudo yum install stow
 ### Prerequisites
 Following Prerequisites must be installed from here: [Arch Packages](https://www.archlinux.org/packages/)
 
-| Prerequisites                                                         | Description                                                                    | [Arch Packages](https://www.archlinux.org/packages/)                                                                                                                                   |
-|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [acpi](https://sourceforge.net/projects/acpiclient/files/acpiclient/) | Client for battery, power, and thermal readings                                | [acpi](https://www.archlinux.org/packages/community/x86_64/acpi/)                                                                                                                      |
-| [alsa](https://www.alsa-project.org/wiki/Main_Page)                   | An alternative implementation of Linux sound support                           | [alsa-utils](https://www.archlinux.org/packages/extra/x86_64/alsa-utils/)                                                                                                              |
-| [apparmor](https://gitlab.com/apparmor)                               | Mandatory Access Control (MAC) using Linux Security Module (LSM)               | [apparmor](https://www.archlinux.org/packages/extra/x86_64/apparmor/)                                                                                                                  |
-| [audit](https://people.redhat.com/sgrubb/audit/)                      | Userspace components of the audit framework                                    | [audit](https://www.archlinux.org/packages/core/x86_64/audit/)                                                                                                                         |
-| [base-devel](https://www.archlinux.org/groups/x86_64/base-devel/)     | Developer utilities                                                            | [base-devel](https://www.archlinux.org/groups/x86_64/base-devel/)                                                                                                                      |
-| [bluez](http://www.bluez.org/)                                        | Daemons for the bluetooth protocol stack                                       | [bluez](https://www.archlinux.org/packages/extra/x86_64/bluez/)                                                                                                                        |
-| [borg](https://www.borgbackup.org/)                                   | Deduplicating backup program with compression and authenticated encryption     | [borg](https://www.archlinux.org/packages/community/x86_64/borg/)                                                                                                                      |
-| [ccache](https://ccache.dev/)                                         | compiler cache                                                                 | [ccache](https://www.archlinux.org/packages/community/x86_64/ccache/)                                                                                                                  |
-| [ctags](http://ctags.sourceforge.net/)                                | Generates an index file of language objects found in source files              | [ctags](https://www.archlinux.org/packages/extra/x86_64/ctags/)                                                                                                                        |
-| [dejavu](https://dejavu-fonts.github.io/)                             | Font family based on the Bitstream Vera Fonts with a wider range of characters | [ttf-dejavu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/)                                                                                                                 |
-| [dhcpd](https://roy.marples.name/projects/dhcpcd/)                    | RFC2131 compliant DHCP client daemon                                           | [dhcpcd](https://www.archlinux.org/packages/core/x86_64/dhcpcd/)                                                                                                                       |
-| [dunst](https://dunst-project.org/)                                   | Customizable and lightweight notification-daemon                               | [dunst](https://www.archlinux.org/packages/community/x86_64/dunst/)                                                                                                                    |
-| [emacs](https://www.gnu.org/software/emacs/)                          | The extensible, customizable, self-documenting real-time display editor        | [emacs](https://www.archlinux.org/packages/extra/x86_64/emacs/)                                                                                                                        |
-| [feh](https://feh.finalrewind.org/)                                   | Fast and light imlib2-based image viewer                                       | [feh](https://www.archlinux.org/packages/extra/x86_64/feh/)                                                                                                                            |
-| [firefox](https://www.mozilla.org/en-US/firefox/)                     | Standalone web browser from mozilla.org                                        | [firefox](https://www.archlinux.org/packages/extra/x86_64/firefox/)                                                                                                                    |
-| [firejail](https://github.com/netblue30/firejail)                     | Linux namespaces sandbox program                                               | [firejail](https://www.archlinux.org/packages/community/x86_64/firejail/)                                                                                                              |
-| [gdb](https://www.gnu.org/software/gdb/)                              | The GNU Project Debugger                                                       | [gdb](https://www.archlinux.org/packages/extra/x86_64/gdb/)                                                                                                                            |
-| [git](https://git-scm.com/)                                           | the fast distributed version control system                                    | [git](https://www.archlinux.org/packages/extra/x86_64/git/)                                                                                                                            |
-| [global](https://www.gnu.org/software/global/)                        | A source code tag system                                                       | [global (AUR)](https://aur.archlinux.org/packages/global/)                                                                                                                             |
-| [i3-gaps](https://github.com/Airblader/i3)                            | A fork of i3wm tiling window manager with more features, including gaps        | [i3-gaps](https://www.archlinux.org/packages/community/x86_64/i3-gaps/)                                                                                                                |
-| [i3lock](https://github.com/i3/i3lock)                                | improved screen locker                                                         | [i3lock-color](https://www.archlinux.org/packages/community/x86_64/i3lock-color/)                                                                                                      |
-| [i3status](https://github.com/i3/i3status)                            | Generates status bar to use with i3bar, dzen2 or xmobar                        | [i3status](https://www.archlinux.org/packages/community/x86_64/i3status/)                                                                                                              |
-| [inetutils](http://www.gnu.org/software/inetutils/)                   | A collection of common network programs                                        | [inetutils](https://www.archlinux.org/packages/core/x86_64/inetutils/)                                                                                                                 |
-| [maim](https://github.com/naelstrof/maim)                             | Utility to take a screenshot using imlib2                                      | [maim](https://www.archlinux.org/packages/community/x86_64/maim/)                                                                                                                      |
-| [mlocate](https://pagure.io/mlocate)                                  | A utility for finding files by name quickly                                    | [mlocate](https://www.archlinux.org/packages/core/x86_64/mlocate/)                                                                                                                     |
-| [nano](https://www.nano-editor.org/)                                  | Pico editor clone with enhancements                                            | [nano](https://www.archlinux.org/packages/core/x86_64/nano/)                                                                                                                           |
-| [networkmanager](https://wiki.gnome.org/Projects/NetworkManager)      | Network connection manager and user applications                               | [networkmanager](https://www.archlinux.org/packages/extra/x86_64/networkmanager/)                                                                                                      |
-| [noto](https://www.google.com/get/noto/)                              | Google Noto TTF fonts                                                          | [noto-fonts](https://www.archlinux.org/packages/extra/any/noto-fonts/)                                                                                                                 |
-| [noto-cjk](https://www.google.com/get/noto/)                          | Google Noto CJK fonts                                                          | [noto-fonts-cjk](https://www.archlinux.org/packages/extra/any/noto-fonts-cjk/)                                                                                                         |
-| [noto-emoji](https://www.google.com/get/noto/)                        | Google Noto emoji fonts                                                        | [noto-fonts-emoji](https://www.archlinux.org/packages/extra/any/noto-fonts-emoji/)                                                                                                     |
-| [openssh](https://www.openssh.com/portable.html)                      | Premier connectivity tool for remote login with the SSH protocol               | [openssh](https://www.archlinux.org/packages/core/x86_64/openssh/)                                                                                                                     |
-| [picom](https://github.com/yshui/picom)                               | X compositor that may fix tearing issues                                       | [picom](https://www.archlinux.org/packages/community/x86_64/picom/)                                                                                                                    |
-| [ranger](http://ranger.github.io/)                                    | Simple, vim-like file manager                                                  | [ranger](https://www.archlinux.org/packages/community/any/ranger/)                                                                                                                     |
-| [rofi](https://github.com/davatorium/rofi)                            | A window switcher, application launcher and dmenu replacement                  | [rofi](https://www.archlinux.org/packages/community/x86_64/rofi/)                                                                                                                      |
-| [screen](https://www.gnu.org/software/screen/)                        | Full-screen window manager that multiplexes a physical terminal                | [screen](https://www.archlinux.org/packages/extra/x86_64/screen/)                                                                                                                      |
-| [stow](https://www.gnu.org/software/stow/)                            | Manage installation of multiple softwares in the same directory tree           | [stow](https://www.archlinux.org/packages/community/any/stow/)                                                                                                                         |
-| [torbrowser-launcher](github.com/micahflee/torbrowser-launcher)       | Securely and easily download, verify, install, and launch Tor Browser in Linux | [torbrowser-launcher](https://www.archlinux.org/packages/community/any/torbrowser-launcher/)                                                                                           |
-| [torsocks](https://gitweb.torproject.org/torsocks.git/)               | Wrapper to safely torify applications                                          | [torsocks](https://www.archlinux.org/packages/community/x86_64/torsocks/)                                                                                                              |
-| [udiskie](https://github.com/coldfix/udiskie)                         | Removable disk automounter using udisks                                        | [udiskie](https://www.archlinux.org/packages/community/any/udiskie/)                                                                                                                   |
-| [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html)             | Unicode enabled rxvt-clone terminal emulator (urxvt)                           | [rxvt-unicode](https://www.archlinux.org/packages/community/x86_64/rxvt-unicode/), [rxvt-unicode-terminfo](https://www.archlinux.org/packages/community/x86_64/rxvt-unicode-terminfo/) |
-| [w3m](http://w3m.sourceforge.net/)                                    | text-based web browser                                                         | [w3m](https://www.archlinux.org/packages/extra/x86_64/w3m/)                                                                                                                            |
-| [wireguard](https://www.wireguard.com/)                               | next generation secure network tunnel - tools for configuration                | [wireguard-tools](https://www.archlinux.org/packages/extra/x86_64/wireguard-tools/)                                                                                                    |
-| [xautolock](http://ibiblio.org/pub/Linux/X11/screensavers/)           | An automatic X screen-locker/screen-saver                                      | [xautolock](https://www.archlinux.org/packages/community/x86_64/xautolock/)                                                                                                            |
-| [xbacklight](https://xorg.freedesktop.org/wiki/)                      | RandR-based backlight control application                                      | [xorg-xbacklight](https://www.archlinux.org/packages/extra/x86_64/xorg-xbacklight/)                                                                                                    |
-| [xclip](https://github.com/astrand/xclip)                             | Command line interface to the X11 clipboard                                    | [xclip](https://www.archlinux.org/packages/extra/x86_64/xclip/)                                                                                                                        |
-| [xdotool](https://www.semicomplete.com/projects/xdotool/)             | Command-line X11 automation tool                                               | [xdotool](https://www.archlinux.org/packages/community/x86_64/xdotool/)                                                                                                                |
-| [xorg-server](https://www.x.org/wiki/)                                | Xorg X server                                                                  | [xorg-server](https://www.archlinux.org/packages/extra/x86_64/xorg-server/)                                                                                                            |
-| [xorg-xauth](https://xorg.freedesktop.org/)                           | X.Org authorization settings program                                           | [xorg-xauth](https://www.archlinux.org/packages/extra/x86_64/xorg-xauth/)                                                                                                              |
-| [xorg-xdm](https://xorg.freedesktop.org/)                             | X Display Manager                                                              | [xorg-xdm](https://www.archlinux.org/packages/extra/x86_64/xorg-xdm/)                                                                                                                  |
-| [zsh](http://www.zsh.org/)                                            | A very advanced and programmable command interpreter (shell) for UNIX          | [zsh](https://www.archlinux.org/packages/extra/x86_64/zsh/)                                                                                                                            |
-
-
-Following Prerequisites must be taken from the [AUR](https://aur.archlinux.org/packages/):
-
-| Prerequisites                                       | Description                                                           | [AUR](https://aur.archlinux.org/packages/) Packages                  |
-|-----------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------|
-| [rofi-calc](https://github.com/svenstaro/rofi-calc) | Do live calculations in rofi!                                         | [rofi-calc (AUR)](https://aur.archlinux.org/packages/rofi-calc/)     |
-| [peda-git](https://github.com/longld/peda)          | Python Exploit Development Assistance for GDB                         | [peda-git (AUR)](https://aur.archlinux.org/packages/peda-git/)       |
-| [symbola](http://users.teilar.gr/~g1951d/)          | Font for unicode symbols (part of Unicode Fonts for Ancient Scripts). | [ttf-symbola (AUR)](https://aur.archlinux.org/packages/ttf-symbola/) |
+| Prerequisites                                                            | Description                                                                    | [Arch Packages](https://www.archlinux.org/packages/)                                                                                                                                   |
+|--------------------------------------------------------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [acpi](https://sourceforge.net/projects/acpiclient/files/acpiclient/)    | Client for battery, power, and thermal readings                                | [acpi](https://www.archlinux.org/packages/community/x86_64/acpi/)                                                                                                                      |
+| [alsa](https://www.alsa-project.org/wiki/Main_Page)                      | An alternative implementation of Linux sound support                           | [alsa-utils](https://www.archlinux.org/packages/extra/x86_64/alsa-utils/)                                                                                                              |
+| [apparmor](https://gitlab.com/apparmor)                                  | Mandatory Access Control (MAC) using Linux Security Module (LSM)               | [apparmor](https://www.archlinux.org/packages/extra/x86_64/apparmor/)                                                                                                                  |
+| [audit](https://people.redhat.com/sgrubb/audit/)                         | Userspace components of the audit framework                                    | [audit](https://www.archlinux.org/packages/core/x86_64/audit/)                                                                                                                         |
+| [base-devel](https://www.archlinux.org/groups/x86_64/base-devel/)        | Developer utilities                                                            | [base-devel](https://www.archlinux.org/groups/x86_64/base-devel/)                                                                                                                      |
+| [bluez](http://www.bluez.org/)                                           | Daemons for the bluetooth protocol stack                                       | [bluez](https://www.archlinux.org/packages/extra/x86_64/bluez/)                                                                                                                        |
+| [borg](https://www.borgbackup.org/)                                      | Deduplicating backup program with compression and authenticated encryption     | [borg](https://www.archlinux.org/packages/community/x86_64/borg/)                                                                                                                      |
+| [ccache](https://ccache.dev/)                                            | compiler cache                                                                 | [ccache](https://www.archlinux.org/packages/community/x86_64/ccache/)                                                                                                                  |
+| [ctags](http://ctags.sourceforge.net/)                                   | Generates an index file of language objects found in source files              | [ctags](https://www.archlinux.org/packages/extra/x86_64/ctags/)                                                                                                                        |
+| [dejavu](https://dejavu-fonts.github.io/)                                | Font family based on the Bitstream Vera Fonts with a wider range of characters | [ttf-dejavu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/)                                                                                                                 |
+| [dhcpd](https://roy.marples.name/projects/dhcpcd/)                       | RFC2131 compliant DHCP client daemon                                           | [dhcpcd](https://www.archlinux.org/packages/core/x86_64/dhcpcd/)                                                                                                                       |
+| [dunst](https://dunst-project.org/)                                      | Customizable and lightweight notification-daemon                               | [dunst](https://www.archlinux.org/packages/community/x86_64/dunst/)                                                                                                                    |
+| [emacs](https://www.gnu.org/software/emacs/)                             | The extensible, customizable, self-documenting real-time display editor        | [emacs](https://www.archlinux.org/packages/extra/x86_64/emacs/)                                                                                                                        |
+| [feh](https://feh.finalrewind.org/)                                      | Fast and light imlib2-based image viewer                                       | [feh](https://www.archlinux.org/packages/extra/x86_64/feh/)                                                                                                                            |
+| [firefox](https://www.mozilla.org/en-US/firefox/)                        | Standalone web browser from mozilla.org                                        | [firefox](https://www.archlinux.org/packages/extra/x86_64/firefox/)                                                                                                                    |
+| [firejail](https://github.com/netblue30/firejail)                        | Linux namespaces sandbox program                                               | [firejail](https://www.archlinux.org/packages/community/x86_64/firejail/)                                                                                                              |
+| [gdb](https://www.gnu.org/software/gdb/)                                 | The GNU Project Debugger                                                       | [gdb](https://www.archlinux.org/packages/extra/x86_64/gdb/)                                                                                                                            |
+| [git](https://git-scm.com/)                                              | the fast distributed version control system                                    | [git](https://www.archlinux.org/packages/extra/x86_64/git/)                                                                                                                            |
+| [i3-gaps](https://github.com/Airblader/i3)                               | A fork of i3wm tiling window manager with more features, including gaps        | [i3-gaps](https://www.archlinux.org/packages/community/x86_64/i3-gaps/)                                                                                                                |
+| [i3status](https://github.com/i3/i3status)                               | Generates status bar to use with i3bar, dzen2 or xmobar                        | [i3status](https://www.archlinux.org/packages/community/x86_64/i3status/)                                                                                                              |
+| [inetutils](http://www.gnu.org/software/inetutils/)                      | A collection of common network programs                                        | [inetutils](https://www.archlinux.org/packages/core/x86_64/inetutils/)                                                                                                                 |
+| [maim](https://github.com/naelstrof/maim)                                | Utility to take a screenshot using imlib2                                      | [maim](https://www.archlinux.org/packages/community/x86_64/maim/)                                                                                                                      |
+| [mlocate](https://pagure.io/mlocate)                                     | A utility for finding files by name quickly                                    | [mlocate](https://www.archlinux.org/packages/core/x86_64/mlocate/)                                                                                                                     |
+| [nano](https://www.nano-editor.org/)                                     | Pico editor clone with enhancements                                            | [nano](https://www.archlinux.org/packages/core/x86_64/nano/)                                                                                                                           |
+| [networkmanager](https://wiki.gnome.org/Projects/NetworkManager)         | Network connection manager and user applications                               | [networkmanager](https://www.archlinux.org/packages/extra/x86_64/networkmanager/)                                                                                                      |
+| [noto](https://www.google.com/get/noto/)                                 | Google Noto TTF fonts                                                          | [noto-fonts](https://www.archlinux.org/packages/extra/any/noto-fonts/)                                                                                                                 |
+| [noto-cjk](https://www.google.com/get/noto/)                             | Google Noto CJK fonts                                                          | [noto-fonts-cjk](https://www.archlinux.org/packages/extra/any/noto-fonts-cjk/)                                                                                                         |
+| [noto-emoji](https://www.google.com/get/noto/)                           | Google Noto emoji fonts                                                        | [noto-fonts-emoji](https://www.archlinux.org/packages/extra/any/noto-fonts-emoji/)                                                                                                     |
+| [openssh](https://www.openssh.com/portable.html)                         | Premier connectivity tool for remote login with the SSH protocol               | [openssh](https://www.archlinux.org/packages/core/x86_64/openssh/)                                                                                                                     |
+| [picom](https://github.com/yshui/picom)                                  | X compositor that may fix tearing issues                                       | [picom](https://www.archlinux.org/packages/community/x86_64/picom/)                                                                                                                    |
+| [pulseaudio-alsa](https://www.freedesktop.org/wiki/Software/PulseAudio/) | A featureful, general-purpose sound server                                     | [pulseaudio-alsa](https://www.archlinux.org/packages/extra/x86_64/pulseaudio-alsa/)                                                                                                    |
+| [ranger](http://ranger.github.io/)                                       | Simple, vim-like file manager                                                  | [ranger](https://www.archlinux.org/packages/community/any/ranger/)                                                                                                                     |
+| [rofi](https://github.com/davatorium/rofi)                               | A window switcher, application launcher and dmenu replacement                  | [rofi](https://www.archlinux.org/packages/community/x86_64/rofi/)                                                                                                                      |
+| [rofi-calc](https://github.com/svenstaro/rofi-calc)                      | Do live calculations in rofi!                                                  | [rofi-calc](https://www.archlinux.org/packages/community/x86_64/rofi-calc/)                                                                                                            |
+| [screen](https://www.gnu.org/software/screen/)                           | Full-screen window manager that multiplexes a physical terminal                | [screen](https://www.archlinux.org/packages/extra/x86_64/screen/)                                                                                                                      |
+| [stow](https://www.gnu.org/software/stow/)                               | Manage installation of multiple softwares in the same directory tree           | [stow](https://www.archlinux.org/packages/community/any/stow/)                                                                                                                         |
+| [torbrowser-launcher](github.com/micahflee/torbrowser-launcher)          | Securely and easily download, verify, install, and launch Tor Browser in Linux | [torbrowser-launcher](https://www.archlinux.org/packages/community/any/torbrowser-launcher/)                                                                                           |
+| [torsocks](https://gitweb.torproject.org/torsocks.git/)                  | Wrapper to safely torify applications                                          | [torsocks](https://www.archlinux.org/packages/community/x86_64/torsocks/)                                                                                                              |
+| [udiskie](https://github.com/coldfix/udiskie)                            | Removable disk automounter using udisks                                        | [udiskie](https://www.archlinux.org/packages/community/any/udiskie/)                                                                                                                   |
+| [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html)                | Unicode enabled rxvt-clone terminal emulator (urxvt)                           | [rxvt-unicode](https://www.archlinux.org/packages/community/x86_64/rxvt-unicode/), [rxvt-unicode-terminfo](https://www.archlinux.org/packages/community/x86_64/rxvt-unicode-terminfo/) |
+| [w3m](http://w3m.sourceforge.net/)                                       | text-based web browser                                                         | [w3m](https://www.archlinux.org/packages/extra/x86_64/w3m/)                                                                                                                            |
+| [wireguard](https://www.wireguard.com/)                                  | next generation secure network tunnel - tools for configuration                | [wireguard-tools](https://www.archlinux.org/packages/extra/x86_64/wireguard-tools/)                                                                                                    |
+| [xautolock](http://ibiblio.org/pub/Linux/X11/screensavers/)              | An automatic X screen-locker/screen-saver                                      | [xautolock](https://www.archlinux.org/packages/community/x86_64/xautolock/)                                                                                                            |
+| [xbacklight](https://xorg.freedesktop.org/wiki/)                         | RandR-based backlight control application                                      | [xorg-xbacklight](https://www.archlinux.org/packages/extra/x86_64/xorg-xbacklight/)                                                                                                    |
+| [xclip](https://github.com/astrand/xclip)                                | Command line interface to the X11 clipboard                                    | [xclip](https://www.archlinux.org/packages/extra/x86_64/xclip/)                                                                                                                        |
+| [xdotool](https://www.semicomplete.com/projects/xdotool/)                | Command-line X11 automation tool                                               | [xdotool](https://www.archlinux.org/packages/community/x86_64/xdotool/)                                                                                                                |
+| [xorg-server](https://www.x.org/wiki/)                                   | Xorg X server                                                                  | [xorg-server](https://www.archlinux.org/packages/extra/x86_64/xorg-server/)                                                                                                            |
+| [xorg-xauth](https://xorg.freedesktop.org/)                              | X.Org authorization settings program                                           | [xorg-xauth](https://www.archlinux.org/packages/extra/x86_64/xorg-xauth/)                                                                                                              |
+| [xorg-xdm](https://xorg.freedesktop.org/)                                | X Display Manager                                                              | [xorg-xdm](https://www.archlinux.org/packages/extra/x86_64/xorg-xdm/)                                                                                                                  |
+| [zsh](http://www.zsh.org/)                                               | A very advanced and programmable command interpreter (shell) for UNIX          | [zsh](https://www.archlinux.org/packages/extra/x86_64/zsh/)                                                                                                                            |
 
 
 Following Prerequisites might need to be changed depending on your hardware configuration:
@@ -122,6 +113,7 @@ Following Prerequisites might need to be changed depending on your hardware conf
 | [xf86-video-nouveau](https://nouveau.freedesktop.org/) | Open Source 3D acceleration driver for nVidia cards | [xf86-nouveau](https://www.archlinux.org/packages/extra/x86_64/xf86-video-nouveau/)   |
 | [xf86-video-intel](https://01.org/linuxgraphics)       | X.org Intel i810/i830/i915/945G/G965+ video drivers | [xf86-video-intel](https://www.archlinux.org/packages/extra/x86_64/xf86-video-intel/) |
 
+
 For virtualbox use these packages:
 
 | Prerequisites                                                | Description                                     | [Arch Packages](https://www.archlinux.org/packages/)                                                                |
@@ -129,6 +121,16 @@ For virtualbox use these packages:
 | [virtualbox-guest-modules-arch](https://www.virtualbox.org/) | Virtualbox guest kernel modules for Arch Kernel | [virtualbox-guest-modules-arch](https://www.archlinux.org/packages/community/x86_64/virtualbox-guest-modules-arch/) |
 | [virtualbox-guest-utils](https://www.virtualbox.org/)        | VirtualBox Guest userspace utilities            | [virtualbox-guest-utils](https://www.archlinux.org/packages/community/x86_64/virtualbox-guest-utils/)               |
 | [xf86-video-vmware](https://xorg.freedesktop.org/wiki/)      | X.org vmware video driver                       | [xf86-video-vmware](https://www.archlinux.org/packages/extra/x86_64/xf86-video-vmware/)                             |
+
+
+Following Prerequisites must be taken from the [AUR](https://aur.archlinux.org/packages/):
+
+| Prerequisites                                  | Description                                                           | [AUR](https://aur.archlinux.org/packages/) Packages                  |
+|------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------|
+| [global](https://www.gnu.org/software/global/) | A source code tag system                                              | [global (AUR)](https://aur.archlinux.org/packages/global/)           |
+| [i3lock](https://github.com/i3/i3lock)         | improved screen locker                                                | [i3lock-color](https://aur.archlinux.org/packages/i3lock-color/)     |
+| [peda-git](https://github.com/longld/peda)     | Python Exploit Development Assistance for GDB                         | [peda-git (AUR)](https://aur.archlinux.org/packages/peda-git/)       |
+| [symbola](http://users.teilar.gr/~g1951d/)     | Font for unicode symbols (part of Unicode Fonts for Ancient Scripts). | [ttf-symbola (AUR)](https://aur.archlinux.org/packages/ttf-symbola/) |
 
 ### Optional Prerequisites
 Following packages might be installed for convenience:
@@ -158,17 +160,17 @@ Following things are installed automatically, via git submodules.
 
 ### Installing
 Before installing the dotfiles, a few things have to be setup manualy.
-First, you should add yourself to the sudo group, this group may have to be created.
 
+Create a a user:
 ```
-su
-groupadd sudo
-gpasswd -add sudo $USER
-exit
+useradd -m -G wheel uucp peter
 ```
+
+When using docker, wireshark or thor, add the user to the docker,
+wireshark and tor groups respectively.
+
 
 For connecting with the internet I use dhcpcd and nmtui(networkmanager).
-
 ```
 sudo systemctl enable dhcpcd.service
 sudo systemctl enable NetworkManager.service
@@ -176,7 +178,6 @@ sudo systemctl enable NetworkManager.service
 
 When using xdm, the xdm service has to be activated.
 If you are already using a Display Manager, this should not be done.
-
 ```
 sudo systemctl enable xdm.service
 ```
@@ -184,14 +185,12 @@ sudo systemctl enable xdm.service
 To install these dotfiles, just clone the repo, it does not need to
 be in any special folder, just put it where you like.
 The `--recursive` is **required**, otherwise the sub-repository's wont be downloaded.
-
 ```
 git clone --recursive https://gitlab.com/peterzuger/dotfiles.git
 cd dotfiles
 ```
 
 now that you have all the sources, just `make home`!
-
 ```
 make home
 ```
@@ -205,21 +204,18 @@ for this you must first place the [breeze](https://github.com/gustawho/grub2-the
 grub theme in `/boot/grub/themes/breeze`.
 
 Then you can regenerate the grub config: (using the correct path if this is not correct)
-
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 There are still a few services that can be enabled to provide some additional functionality:
 To enable them all use:
-
 ```
 systemctl --user enable dunst.service picom.service udiskie.service xautolock.service
 ```
 
 ### Uninstalling
 To unstow the dotfiles.
-
 ```
 make home-uninstall
 ```
