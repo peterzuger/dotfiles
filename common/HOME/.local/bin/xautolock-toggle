@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# File does not exist after system start
+ONCE_FILE="/tmp/xautolock-disabled"
+
+if [ ! -f "$ONCE_FILE" ]; then
+    xautolock -disable
+    notify-send -a "Screen" -i "/usr/share/icons/Adwaita/64x64/status/system-lock-screen-symbolic.symbolic.png" "xautolock disabled"
+    touch "$ONCE_FILE"
+else
+    xautolock -enable
+    notify-send -a "Screen" -i "/usr/share/icons/Adwaita/64x64/status/system-lock-screen-symbolic.symbolic.png" "xautolock enabled"
+    rm "$ONCE_FILE"
+fi

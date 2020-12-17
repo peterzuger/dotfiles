@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+if rfkill --output TYPE,SOFT | grep "bluetooth" | grep -q "unblocked"; then
+    if bluetoothctl show | grep -q "Powered: yes"; then
+        bluetoothctl power off >/dev/null
+        notify-send -a "bluetooth" -i "/usr/share/icons/Adwaita/64x64/status/bluetooth-disabled-symbolic.symbolic.png" "Bluetooth disabled"
+    else
+        bluetoothctl power on >/dev/null
+        notify-send -a "bluetooth" -i "/usr/share/icons/Adwaita/64x64/status/bluetooth-active-symbolic.symbolic.png" "Bluetooth enabled"
+    fi
+else
+    notify-send -a "bluetooth" -i "/usr/share/icons/Adwaita/64x64/status/bluetooth-hardware-disabled-symbolic.symbolic.png" "Bluetooth blocked"
+fi

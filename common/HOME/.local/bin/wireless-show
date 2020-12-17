@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if rfkill --output TYPE,SOFT | grep "wlan" | grep -q "unblocked"; then
+    notify-send -a "wlan" -i "/usr/share/icons/Adwaita/64x64/status/network-wireless-signal-excellent-symbolic.symbolic.png" "W-LAN enabled"
+else
+    notify-send -a "wlan" -i "/usr/share/icons/Adwaita/64x64/status/network-wireless-disabled-symbolic.symbolic.png" "W-LAN disabled"
+fi

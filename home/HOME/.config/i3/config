@@ -23,13 +23,13 @@ bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioMicMute      exec --no-startup-id pactl set-source-mute 1 toggle
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight - 10
 bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight + 10
-#bindsym XF86Display
-#bindsym XF86WLAN
+bindsym XF86Display           exec --no-startup-id $HOME/.local/bin/xautolock-toggle
+bindsym XF86WLAN              exec --no-startup-id $HOME/.local/bin/wireless-show
 #bindsym XF86Tools
-#bindsym XF86Bluetooth
+bindsym XF86Bluetooth         exec --no-startup-id $HOME/.local/bin/bluetooth-show
 bindsym XF86Calculator        exec --no-startup-id rofi -show calc
 # Fn-F11 ?
-# Fn-F12 ?
+#bindsym XF86Favorites
 #bindsym XF86Sleep
 bindsym --release Print            exec --no-startup-id maim $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
 bindsym --release $mod+Print       exec --no-startup-id maim --window=$(xdotool getactivewindow) $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
