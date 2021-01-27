@@ -21,6 +21,9 @@ bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioMicMute      exec --no-startup-id pactl set-source-mute 1 toggle
+bindsym XF86AudioPrev         exec --no-startup-id cmus-remote --prev
+bindsym XF86AudioNext         exec --no-startup-id cmus-remote --next
+bindsym XF86AudioPlay         exec --no-startup-id cmus-remote --pause
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight - 10
 bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight + 10
 bindsym XF86Display           exec --no-startup-id $HOME/.local/bin/xautolock-toggle
