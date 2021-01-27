@@ -32,6 +32,9 @@ bindkey "^[[3~" delete-char
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
+# Ignore CTRL-D to prevent accidental shell exit
+set -o ignoreeof
+
 # This was written entirely by Mikael Magnusson (Mikachu)
 # Basically type '...' to get '../..' with successive .'s adding /..
 function rationalise-dot {
