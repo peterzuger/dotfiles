@@ -28,7 +28,9 @@ volume master {
         mixer_idx = 0
 }
 disk "/home/" {
-        format = "%avail"
+        format = "%free (%percentage_used)"
+        low_threshold = 10
+        threshold_type = "percentage_free"
 }
 wireless _first_ {
         format_up = "W: (%quality at %essid %bitrate / %frequency) %ip"
