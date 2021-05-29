@@ -4,7 +4,7 @@ Description=Lock the screen automatically after a timeout
 [Service]
 Type=simple
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/xautolock -detectsleep -corners 0-00 -time 5 -locker "i3lock -k -B=0 --insidevercolor=808080FF --insidewrongcolor=FF0000FF --insidecolor=40404080 --ringvercolor=7F9F7FFF --ringwrongcolor=FF0000FF --ringcolor=7F9F7FFF --linecolor=000000FF --keyhlcolor=000000FF --bshlcolor=000000FF --separatorcolor=000000FF --verifcolor=F6F3E8FF --wrongcolor=FF0000FF --timecolor=F6F3E8FF --datecolor=F6F3E8FF --indicator --radius=100"
+ExecStart=/usr/bin/xautolock -detectsleep -corners 0-00 -time 5 -locker "i3lock -k -B=0 --insidever-color=808080FF --insidewrong-color=FF0000FF --inside-color=40404080 --ringver-color=7F9F7FFF --ringwrong-color=FF0000FF --ring-color=7F9F7FFF --line-color=000000FF --keyhl-color=000000FF --bshl-color=000000FF --separator-color=000000FF --verif-color=F6F3E8FF --wrong-color=FF0000FF --time-color=F6F3E8FF --date-color=F6F3E8FF --indicator --radius=100"
 Restart=on-failure
 RestartSec=10
 
