@@ -1,0 +1,8 @@
+program_options:
+  tray:             False
+  automount:        True
+  notify:           True
+
+device_config:
+- id_type: btrfs
+  options: [rw, nosuid, nodev, relatime, compress=lzo, space_cache]
