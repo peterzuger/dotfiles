@@ -32,6 +32,14 @@ bindkey "^[[3~" delete-char
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
+function preexec {
+    if [[ "$1" == ssh\ * ]] || [[ "$1" == sudo\ * ]]; then
+        echo -ne "\ek$(echo "$1" | awk '{print $2}')\e\\"
+    else
+        echo -ne "\ek${1%% *}\e\\"
+    fi
+}
+
 # Ignore CTRL-D to prevent accidental shell exit
 set -o ignoreeof
 
@@ -70,7 +78,7 @@ if [[ $- == *i* ]]; then
    stty -ixon
 fi
 
-function countdown(){
+function countdown {
    date1=$((`date +%s` + $1));
    while [ "$date1" -ge `date +%s` ]; do
      echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
