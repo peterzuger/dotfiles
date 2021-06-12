@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+echo "${HOME}/.local/share/wallpapers/baron-digit.png"

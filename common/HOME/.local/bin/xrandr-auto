@@ -19,4 +19,4 @@ if [ $# -ne 0 ]; then
 fi
 
 eval $XRANDR_CMD
-feh --bg-fill ${HOME}/.local/share/Background.png
+feh --bg-fill "$(wallpaper)"

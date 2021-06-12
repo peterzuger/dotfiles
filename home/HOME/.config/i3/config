@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-exec --no-startup-id feh --bg-fill $HOME/.local/share/wallpapers/baron-digit.png
+exec --no-startup-id feh --bg-fill "$(wallpaper)"
 
 for_window [class="^.*"] border pixel 0
 for_window [class="(?i)mpv"] floating enable
