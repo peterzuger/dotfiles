@@ -27,7 +27,7 @@ def cache_function_for(t=60):
 
 
 def get_wg_interfaces():
-    """ Get Wireguard interfaces. """
+    """Get Wireguard interfaces."""
     result = subprocess.run(["wg", "show", "interfaces"], stdout=subprocess.PIPE)
     return result.stdout.decode("utf-8").strip()
 
@@ -41,7 +41,7 @@ btctl_re = re.compile(r"(?:Powered:)\s+(.*)")
 
 
 def get_bluetooth_status():
-    """ Get Bluetooth status. """
+    """Get Bluetooth status."""
     result = subprocess.run(["bluetoothctl", "show"], stdout=subprocess.PIPE)
     return "yes" in btctl_re.findall(result.stdout.decode("utf-8"))
 
@@ -54,13 +54,13 @@ def bluetooth():
 
 
 def print_line(message):
-    """ Non-buffered printing to stdout. """
+    """Non-buffered printing to stdout."""
     sys.stdout.write(message + "\n")
     sys.stdout.flush()
 
 
 def read_line():
-    """ Interrupted respecting reader for stdin. """
+    """Interrupted respecting reader for stdin."""
     # try reading a line, removing any extra whitespace
     try:
         line = sys.stdin.readline().strip()

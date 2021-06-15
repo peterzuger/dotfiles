@@ -32,13 +32,16 @@ bindkey "^[[3~" delete-char
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
-function preexec {
-    if [[ "$1" == ssh\ * ]] || [[ "$1" == sudo\ * ]]; then
-        echo -ne "\ek$(echo "$1" | awk '{print $2}')\e\\"
-    else
-        echo -ne "\ek${1%% *}\e\\"
-    fi
-}
+# only in screen
+if [ -n "$STY" ]; then
+    function preexec {
+        if [[ "$1" == ssh\ * ]] || [[ "$1" == sudo\ * ]]; then
+            echo -ne "\ek$(echo "$1" | awk '{print $2}')\e\\"
+        else
+            echo -ne "\ek${1%% *}\e\\"
+        fi
+    }
+fi
 
 # Ignore CTRL-D to prevent accidental shell exit
 set -o ignoreeof
@@ -71,19 +74,19 @@ export PATH="$PATH:$HOME/.local/bin/"
 export FEED_BOOKMARKS=$HOME/.zsh/newsfeed
 
 if [[ $- == *i* ]]; then
-   [[ -e ~/.zsh/liquidprompt/liquidprompt  ]] && source ~/.zsh/liquidprompt/liquidprompt
-   [[ -e ~/.zsh/ssh-connect/ssh-connect.sh ]] && source ~/.zsh/ssh-connect/ssh-connect.sh
-   [[ -e ~/.zsh/newsfeed.sh ]] && source ~/.zsh/newsfeed.sh
-   [[ -e ~/.zsh/zsh-insulter/src/zsh.command-not-found ]] && source ~/.zsh/zsh-insulter/src/zsh.command-not-found
-   stty -ixon
+    [[ -e ~/.zsh/liquidprompt/liquidprompt  ]] && source ~/.zsh/liquidprompt/liquidprompt
+    [[ -e ~/.zsh/ssh-connect/ssh-connect.sh ]] && source ~/.zsh/ssh-connect/ssh-connect.sh
+    [[ -e ~/.zsh/newsfeed.sh ]] && source ~/.zsh/newsfeed.sh
+    [[ -e ~/.zsh/zsh-insulter/src/zsh.command-not-found ]] && source ~/.zsh/zsh-insulter/src/zsh.command-not-found
+    stty -ixon
 fi
 
 function countdown {
-   date1=$((`date +%s` + $1));
-   while [ "$date1" -ge `date +%s` ]; do
-     echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
-     sleep 0.1
-   done
+    date1=$((`date +%s` + $1));
+    while [ "$date1" -ge `date +%s` ]; do
+        echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
+        sleep 0.1
+    done
 }
 
 alias yy="mpv --really-quiet --volume=50 --autofit=30% --geometry=-10-15 --ytdl --ytdl-format='mp4[height<=?720]' -ytdl-raw-options=playlist-start=1"
