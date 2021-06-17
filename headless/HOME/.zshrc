@@ -17,13 +17,13 @@ zstyle ':completion:*' old-list never
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' substitute 1
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '~/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
-compinit -d '~/.zsh/zcompdump'
+compinit -d '$HOME/.config/zsh/zcompdump'
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.zsh/histfile
+HISTFILE="$HOME/.config/zsh/histfile"
 HISTSIZE=10000000
 SAVEHIST=10000000
 setopt appendhistory autocd extendedglob nomatch
@@ -65,13 +65,13 @@ bindkey . rationalise-dot
 bindkey -M isearch . self-insert
 
 # expicitly set feed bookmarks to different directory
-export FEED_BOOKMARKS=$HOME/.zsh/newsfeed
+export FEED_BOOKMARKS="$HOME/.config/zsh/newsfeed"
 
 if [[ $- == *i* ]]; then
-    [[ -e ~/.zsh/liquidprompt/liquidprompt  ]] && source ~/.zsh/liquidprompt/liquidprompt
-    [[ -e ~/.zsh/ssh-connect/ssh-connect.sh ]] && source ~/.zsh/ssh-connect/ssh-connect.sh
-    [[ -e ~/.zsh/newsfeed.sh ]] && source ~/.zsh/newsfeed.sh
-    [[ -e ~/.zsh/zsh-insulter/src/zsh.command-not-found ]] && source ~/.zsh/zsh-insulter/src/zsh.command-not-found
+    [[ -e "$HOME/.config/zsh/liquidprompt/liquidprompt"  ]] && source "$HOME/.config/zsh/liquidprompt/liquidprompt"
+    [[ -e "$HOME/.config/zsh/ssh-connect/ssh-connect.sh" ]] && source "$HOME/.config/zsh/ssh-connect/ssh-connect.sh"
+    [[ -e "$HOME/.config/zsh/newsfeed.sh" ]] && source "$HOME/.config/zsh/newsfeed.sh"
+    [[ -e "$HOME/.config/zsh/zsh-insulter/src/zsh.command-not-found" ]] && source "$HOME/.config/zsh/zsh-insulter/src/zsh.command-not-found"
     stty -ixon
 fi
 

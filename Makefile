@@ -22,12 +22,12 @@ prepare:
 	$(MKDIR) $(HOME)/.config/git
 	$(MKDIR) $(HOME)/.config/systemd
 	$(MKDIR) $(HOME)/.config/systemd/user
+	$(MKDIR) $(HOME)/.config/zsh
 	$(MKDIR) $(HOME)/.local
 	$(MKDIR) $(HOME)/.local/bin
 	$(MKDIR) $(HOME)/.local/share
 	$(MKDIR) $(HOME)/.gnupg
 	$(MKDIR) $(HOME)/.ssh
-	$(MKDIR) $(HOME)/.zsh
 
 .PHONY: headless
 headless: prepare
