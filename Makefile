@@ -22,6 +22,7 @@ prepare:
 	$(MKDIR) $(HOME)/.config/aspell
 	$(MKDIR) $(HOME)/.config/git
 	$(MKDIR) $(HOME)/.config/gnupg
+	$(MKDIR) $(HOME)/.config/offlineimap
 	$(MKDIR) $(HOME)/.config/systemd
 	$(MKDIR) $(HOME)/.config/systemd/user
 	$(MKDIR) $(HOME)/.config/zsh
