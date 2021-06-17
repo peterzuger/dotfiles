@@ -1,9 +1,16 @@
 export EMAIL="zueger.peter@icloud.com"
 export NAME="Peter Züger"
+
+export NETRC="${HOME}/.config/netrc"
+export PYLINTHOME="${HOME}/.config/pylint.d"
+export DOCKER_CONFIG="${HOME}/.config/docker"
+export LESSHISTFILE=-
+
 export MPY_BAUDRATE=460800
 
 if [ -d "/usr/lib/distcc/bin" ]; then
     export DISTCC_HOSTS="localhost/8"
+    export DISTCC_DIR="${HOME}/.config/distcc"
     export CCACHE_PREFIX="distcc"
 fi
 
@@ -11,7 +18,7 @@ if [ -d "/usr/lib/ccache/bin" ]; then
     export PATH="/usr/lib/ccache/bin:${PATH}"
 fi
 
-export GOPATH="${HOME}/.go"
-if [ -d "${HOME}/.go" ]; then
+export GOPATH="${HOME}/.config/go"
+if [ -d "${GOPATH}" ]; then
     export PATH="${PATH}:${GOPATH}/bin"
 fi
