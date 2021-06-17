@@ -20,6 +20,7 @@ all: help
 prepare:
 	$(MKDIR) $(HOME)/.config
 	$(MKDIR) $(HOME)/.config/aspell
+	$(MKDIR) $(HOME)/.config/distcc
 	$(MKDIR) $(HOME)/.config/git
 	$(MKDIR) $(HOME)/.config/gnupg
 	$(MKDIR) $(HOME)/.config/offlineimap
