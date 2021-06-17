@@ -1,2 +1,2 @@
-systemctl --user import-environment DISPLAY XAUTHORITY
+systemctl --user import-environment DISPLAY
 exec i3
