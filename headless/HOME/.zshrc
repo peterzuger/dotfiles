@@ -20,7 +20,7 @@ zstyle ':completion:*' verbose true
 zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
-compinit
+compinit -d '~/.zsh/zcompdump'
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh/histfile
