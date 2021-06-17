@@ -1,0 +1,6 @@
+configuration {
+	modi: "combi#run#window#ssh#calc";
+	sidebar-mode: true;
+	matching: "fuzzy";
+	theme: "/usr/share/rofi/themes/glue_pro_blue.rasi";
+}

@@ -1,4 +1,0 @@
-rofi.modi:                           combi#run#window#ssh#calc
-rofi.sidebar-mode:                   true
-rofi.matching:                       fuzzy
-rofi.theme: /usr/share/rofi/themes/glue_pro_blue.rasi
