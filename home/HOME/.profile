@@ -7,6 +7,7 @@ export PAGER=less
 export PATH="$PATH:$HOME/.local/bin"
 
 export NETRC="${HOME}/.config/netrc"
+export GNUPGHOME="${HOME}/.config/gnupg"
 export PYLINTHOME="${HOME}/.config/pylint.d"
 export DOCKER_CONFIG="${HOME}/.config/docker"
 export ASPELL_CONF="home-dir ${HOME}/.config/aspell"

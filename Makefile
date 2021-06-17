@@ -21,13 +21,13 @@ prepare:
 	$(MKDIR) $(HOME)/.config
 	$(MKDIR) $(HOME)/.config/aspell
 	$(MKDIR) $(HOME)/.config/git
+	$(MKDIR) $(HOME)/.config/gnupg
 	$(MKDIR) $(HOME)/.config/systemd
 	$(MKDIR) $(HOME)/.config/systemd/user
 	$(MKDIR) $(HOME)/.config/zsh
 	$(MKDIR) $(HOME)/.local
 	$(MKDIR) $(HOME)/.local/bin
 	$(MKDIR) $(HOME)/.local/share
-	$(MKDIR) $(HOME)/.gnupg
 	$(MKDIR) $(HOME)/.ssh
 
 .PHONY: headless
