@@ -1,0 +1,6 @@
+directory.default.set = ~/Downloads/rtorrent/
+session.path.set = ~/Downloads/rtorrent/session/
+
+dht.mode.set = auto
+dht.port.set = 6881
+protocol.pex.set= yes
