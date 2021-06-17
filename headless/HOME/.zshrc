@@ -64,12 +64,6 @@ bindkey . rationalise-dot
 # without this, typing a . aborts incremental history search
 bindkey -M isearch . self-insert
 
-
-export EDITOR="emacs --no-window-system"
-export PAGER=less
-export VISUAL=$EDITOR
-export PATH="$PATH:$HOME/.local/bin/"
-
 # expicitly set feed bookmarks to different directory
 export FEED_BOOKMARKS=$HOME/.zsh/newsfeed
 

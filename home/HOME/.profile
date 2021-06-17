@@ -1,6 +1,11 @@
 export EMAIL="zueger.peter@icloud.com"
 export NAME="Peter Züger"
 
+export EDITOR="emacs --no-window-system"
+export VISUAL=$EDITOR
+export PAGER=less
+export PATH="$PATH:$HOME/.local/bin/"
+
 export NETRC="${HOME}/.config/netrc"
 export PYLINTHOME="${HOME}/.config/pylint.d"
 export DOCKER_CONFIG="${HOME}/.config/docker"
