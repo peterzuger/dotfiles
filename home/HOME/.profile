@@ -6,6 +6,7 @@ export VISUAL=$EDITOR
 export PAGER=less
 export PATH="$PATH:$HOME/.local/bin"
 
+export PASSWORD_STORE_DIR="${HOME}/.config/password-store"
 export SCREENRC="${HOME}/.config/screenrc"
 export NETRC="${HOME}/.config/netrc"
 export GNUPGHOME="${HOME}/.config/gnupg"
