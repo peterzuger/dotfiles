@@ -1,29 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-if curl --fail --silent ipinfo.io/ip; then
-    exit 0
-fi
+HOSTS=(ipinfo.io/ip
+       icanhazip.com
+       curlmyip.net
+       ipecho.net/plain
+       ident.me
+       ipaddr.site)
 
-if curl --fail --silent icanhazip.com; then
-    exit 0
-fi
-
-if curl --fail --silent curlmyip.net; then
-    exit 0
-fi
-
-if curl --fail --silent ipecho.net/plain; then
-    exit 0
-fi
-
-if curl --fail --silent ifconfig.pro; then
-    exit 0
-fi
-
-if curl --fail --silent ident.me; then
-    exit 0
-fi
-
-if curl --fail --silent ipaddr.site; then
-    exit 0
-fi
+for HOST in "${HOSTS[@]}"; do
+    if curl --fail --silent "$HOST"; then
+        exit 0
+    fi
+done
