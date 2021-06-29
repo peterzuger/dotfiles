@@ -6,7 +6,7 @@ else
 	Q = @
 endif
 
-MKDIR = $(Q)mkdir -p
+MKDIR = $(Q)mkdir --parents
 STOW  = $(Q)stow
 SSTOW = $(Q)sudo stow
 ECHO  = @echo
@@ -14,53 +14,55 @@ ECHO  = @echo
 INSTALL_TARGETS   = $(TARGETS)
 UNINSTALL_TARGETS = $(TARGETS:=-uninstall)
 
+INSTALL_HOME = $(DESTDIR)/$(HOME)
+INSTALL_ETC  = $(DESTDIR)/etc
+
 all: help
 
 .PHONY: prepare
 prepare:
-	$(MKDIR) $(HOME)/.config
-	$(MKDIR) $(HOME)/.config/aspell
-	$(MKDIR) $(HOME)/.config/distcc
-	$(MKDIR) $(HOME)/.config/git
-	$(MKDIR) $(HOME)/.config/gnupg
-	$(MKDIR) $(HOME)/.config/offlineimap
-	$(MKDIR) $(HOME)/.config/systemd
-	$(MKDIR) $(HOME)/.config/systemd/user
-	$(MKDIR) $(HOME)/.config/zsh
-	$(MKDIR) $(HOME)/.local
-	$(MKDIR) $(HOME)/.local/bin
-	$(MKDIR) $(HOME)/.local/share
-	$(MKDIR) $(HOME)/.ssh
+	$(MKDIR) $(INSTALL_HOME)/.config/aspell
+	$(MKDIR) $(INSTALL_HOME)/.config/distcc
+	$(MKDIR) $(INSTALL_HOME)/.config/git
+	$(MKDIR) $(INSTALL_HOME)/.config/gnupg
+	$(MKDIR) $(INSTALL_HOME)/.config/offlineimap
+	$(MKDIR) $(INSTALL_HOME)/.config/systemd/user
+	$(MKDIR) $(INSTALL_HOME)/.config/zsh
+
+	$(MKDIR) $(INSTALL_HOME)/.local/bin
+	$(MKDIR) $(INSTALL_HOME)/.local/share
+
+	$(MKDIR) $(INSTALL_HOME)/.ssh
 
 .PHONY: headless
 headless: prepare
-	$(STOW) -t $(HOME) -d headless HOME
-	$(SSTOW) -t /etc -d headless etc
+	$(STOW) --target=$(INSTALL_HOME) --dir=headless HOME
+	$(SSTOW) --target=$(INSTALL_ETC) --dir=headless etc
 
 .PHONY: headless-uninstall
 headless-uninstall:
-	$(STOW) --delete -t $(HOME) -d headless HOME
-	$(SSTOW) --delete -t /etc -d headless etc
+	$(STOW) --delete --target=$(INSTALL_HOME) --dir=headless HOME
+	$(SSTOW) --delete --target=$(INSTALL_ETC) --dir=headless etc
 
 .PHONY: common
 common: headless
-	$(STOW) -t $(HOME) -d common HOME
-	$(SSTOW) -t /etc -d common etc
+	$(STOW) --target=$(INSTALL_HOME) --dir=common HOME
+	$(SSTOW) --target=$(INSTALL_ETC) --dir=common etc
 
 .PHONY: common-uninstall
 common-uninstall: headless-uninstall
-	$(STOW) --delete -t $(HOME) -d common HOME
-	$(SSTOW) --delete -t /etc -d common etc
+	$(STOW) --delete --target=$(INSTALL_HOME) --dir=common HOME
+	$(SSTOW) --delete --target=$(INSTALL_ETC) --dir=common etc
 
 .PHONY: $(INSTALL_TARGETS)
 $(INSTALL_TARGETS): prepare common
-	$(STOW) -t $(HOME) -d $@ HOME
-	$(SSTOW) -t /etc -d $@ etc
+	$(STOW) --target=$(INSTALL_HOME) --dir=$@ HOME
+	$(SSTOW) --target=$(INSTALL_ETC) --dir=$@ etc
 
 .PHONY: $(UNINSTALL_TARGETS)
 $(UNINSTALL_TARGETS): common-uninstall
-	$(STOW) --delete -t $(HOME) -d $(@:-uninstall=) HOME
-	$(SSTOW) --delete -t /etc -d $(@:-uninstall=) etc
+	$(STOW) --delete --target=$(INSTALL_HOME) --dir=$(@:-uninstall=) HOME
+	$(SSTOW) --delete --target=$(INSTALL_ETC) --dir=$(@:-uninstall=) etc
 
 .PHONY: help
 help:
