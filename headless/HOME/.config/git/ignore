@@ -1,5 +1,23 @@
+# GNU global tag files
 GTAGS
 GRTAGS
 GPATH
+
+# Python compiled bytecode and cache folders
+*.py[cod]
+.mypy_cache/
+__pycache__/
+
+# GNU Emacs on the fly syntax checker intermediate files
 flycheck_*
+
+
+# The following files should be ignored in the respective repository but some
+# don't do that
+
+# generated make dependencies
 *.d
+
+# CircuitPython secrets file
+# WiFi network's SSID and password and other sensitive information
+secrets.py
