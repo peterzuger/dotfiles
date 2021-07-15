@@ -7,53 +7,60 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
-        interval = 1
-        output_format = "i3bar"
+    colors = true
+    interval = 1
+    output_format = "i3bar"
 }
 
-order += "volume master"
-order += "disk /home/"
 order += "wireless _first_"
 order += "ethernet _first_"
+order += "ipv6"
+order += "volume master"
+order += "disk /home/"
+order += "load"
+order += "memory"
 order += "battery 0"
 order += "battery 1"
-order += "load"
 order += "tztime local"
 
-volume master {
-        format = "♪: %volume"
-        format_muted = "♪: muted (%volume)"
-        device = "default"
-        mixer = "Master"
-        mixer_idx = 0
-}
-disk "/home/" {
-        format = "%free (%percentage_used)"
-        low_threshold = 10
-        threshold_type = "percentage_free"
-}
 wireless _first_ {
-        format_up = "W: (%quality at %essid %bitrate / %frequency) %ip"
-        format_down = "W: down"
+    format_up = "W: (%quality at %essid %bitrate / %frequency) %ip"
+    format_down = "W: down"
 }
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
+    format_up = "E: %ip (%speed)"
+    format_down = "E: down"
 }
-battery 0 {
-        last_full_capacity = true
-        format = "%status %percentage %remaining %emptytime"
-        format_down = "No Battery"
+volume master {
+    format = "♪: %volume"
+    format_muted = "♪: muted (%volume)"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
 }
-battery 1 {
-        last_full_capacity = true
-        format = "%status %percentage %remaining %emptytime"
-        format_down = "No Battery"
+disk "/home/" {
+    format = "%free (%percentage_used)"
+    low_threshold = 10
+    threshold_type = "percentage_free"
 }
 load {
-     format = "[ load: 1m:%1min, 5m:%5min, 15m:%15min ]"
+    format = "[ load: 1m:%1min, 5m:%5min, 15m:%15min"
+    separator = false
+}
+memory {
+    format = "mem: %available (%percentage_used) ]"
+    threshold_degraded = "10%"
+}
+battery 0 {
+    last_full_capacity = true
+    format = "%status %percentage %remaining %emptytime"
+    format_down = ""
+}
+battery 1 {
+    last_full_capacity = true
+    format = "%status %percentage %remaining %emptytime"
+    format_down = ""
 }
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+    format = "%Y-%m-%d %H:%M:%S"
 }

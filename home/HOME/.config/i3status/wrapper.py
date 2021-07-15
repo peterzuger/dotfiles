@@ -26,15 +26,24 @@ def cache_function_for(t=60):
     return inner
 
 
+def get_stdout(args):
+    try:
+        return subprocess.run(args, capture_output=True, check=True).stdout.decode()
+    except subprocess.CalledProcessError:
+        return ""
+
+
 def get_wg_interfaces():
     """Get Wireguard interfaces."""
-    result = subprocess.run(["wg", "show", "interfaces"], stdout=subprocess.PIPE)
-    return result.stdout.decode("utf-8").strip()
+    return get_stdout(["wg", "show", "interfaces"]).strip()
 
 
 @cache_function_for(t=10)
 def wireguard():
-    return {"full_text": get_wg_interfaces(), "name": "wg"}
+    interfaces = get_wg_interfaces()
+    if interfaces:
+        return {"full_text": "WG: {}".format(interfaces), "name": "wg"}
+    return {"full_text": "", "name": "wg"}
 
 
 btctl_re = re.compile(r"(?:Powered:)\s+(.*)")
@@ -42,8 +51,7 @@ btctl_re = re.compile(r"(?:Powered:)\s+(.*)")
 
 def get_bluetooth_status():
     """Get Bluetooth status."""
-    result = subprocess.run(["bluetoothctl", "show"], stdout=subprocess.PIPE)
-    return "yes" in btctl_re.findall(result.stdout.decode("utf-8"))
+    return "yes" in btctl_re.findall(get_stdout(["bluetoothctl", "show"]))
 
 
 @cache_function_for(t=10)
@@ -88,7 +96,7 @@ def main():
 
         j = json.loads(line)
 
-        j.insert(2, bluetooth())
+        j.insert(0, bluetooth())
         j.insert(0, wireguard())
 
         print_line(prefix + json.dumps(j))
