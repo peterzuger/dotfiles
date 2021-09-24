@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -f "$1" ] ; then
+if [ "$#" -eq 2 ] && [ -f "$1" ] ; then
     case "$1" in
         *.tar.bz2|*.tgz|*.tbz2|*.tbz) mkdir -v "$2" 2>/dev/null ; tar xvjf "$1" -C "$2" ;;
         *.tar.gz)                     mkdir -v "$2" 2>/dev/null ; tar xvzf "$1" -C "$2" ;;
@@ -17,7 +17,7 @@ if [ -f "$1" ] ; then
         *)
     esac
 else
-    echo "Sorry, '$2' could not be decompressed."
+    echo "Sorry, '$1' could not be decompressed."
     echo "Usage: ad <archive> <destination>"
     echo "Example: ad PKGBUILD.tar.bz2 ."
     echo "Valid archive types are:"
