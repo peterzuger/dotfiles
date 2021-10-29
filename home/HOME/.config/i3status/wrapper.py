@@ -28,8 +28,10 @@ def cache_function_for(t=60):
 
 def get_stdout(args):
     try:
-        return subprocess.run(args, capture_output=True, check=True).stdout.decode()
-    except subprocess.CalledProcessError:
+        return subprocess.run(
+            args, capture_output=True, timeout=0.1, check=True
+        ).stdout.decode()
+    except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
         return ""
 
 
