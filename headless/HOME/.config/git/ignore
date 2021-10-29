@@ -21,3 +21,6 @@ flycheck_*
 # CircuitPython secrets file
 # WiFi network's SSID and password and other sensitive information
 secrets.py
+
+# ignore GDB history files from peda
+.gdb_history
