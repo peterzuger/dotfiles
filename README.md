@@ -67,6 +67,8 @@ Following Prerequisites must be installed from here: [Arch Packages](https://www
 | [clang](https://clang.llvm.org/)                                         | C language family frontend for LLVM                                               | [clang](https://archlinux.org/packages/extra/x86_64/clang/)                                                                                                                            |
 | [cmus](https://cmus.github.io/)                                          | Feature-rich ncurses-based music player                                           | [cmus](https://archlinux.org/packages/community/x86_64/cmus/)                                                                                                                          |
 | [dejavu](https://dejavu-fonts.github.io/)                                | Font family based on the Bitstream Vera Fonts with a wider range of characters    | [ttf-dejavu](https://www.archlinux.org/packages/extra/any/ttf-dejavu/)                                                                                                                 |
+| [docker](https://www.docker.com/)                                        | Pack, ship and run any application as a lightweight container                     | [docker](https://archlinux.org/packages/community/x86_64/docker/)                                                                                                                      |
+| [docker-compose](https://www.docker.com/)                                | Fast, isolated development environments using Docker                              | [docker-compose](https://archlinux.org/packages/community/x86_64/docker-compose/)                                                                                                      |
 | [dhcpd](https://roy.marples.name/projects/dhcpcd/)                       | RFC2131 compliant DHCP client daemon                                              | [dhcpcd](https://www.archlinux.org/packages/core/x86_64/dhcpcd/)                                                                                                                       |
 | [dunst](https://dunst-project.org/)                                      | Customizable and lightweight notification-daemon                                  | [dunst](https://www.archlinux.org/packages/community/x86_64/dunst/)                                                                                                                    |
 | [emacs](https://www.gnu.org/software/emacs/)                             | The extensible, customizable, self-documenting real-time display editor           | [emacs](https://www.archlinux.org/packages/extra/x86_64/emacs/)                                                                                                                        |
@@ -172,19 +174,25 @@ Following Prerequisites must be taken from the [AUR](https://aur.archlinux.org/p
 ### Optional Prerequisites
 Following packages might be installed for convenience:
 
-| Prerequisites                                      | Description                                                                               | [Arch Packages](https://www.archlinux.org/packages/)                  |
-|----------------------------------------------------|-------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| [tar](https://www.gnu.org/software/tar/)           | create tar archives                                                                       | [tar](https://www.archlinux.org/packages/core/x86_64/tar/)            |
-| [rar](https://www.rarlab.com/)                     | powerful archive manager                                                                  | [rar](https://aur.archlinux.org/packages/rar/)                        |
-| [zip](http://infozip.sourceforge.net/Zip.html)     | compression and file packaging/archive utility                                            | [zip](https://www.archlinux.org/packages/extra/x86_64/zip/)           |
-| [7z](http://p7zip.sourceforge.net/)                | p7zip is a port of 7za.exe for POSIX systems                                              | [p7zip](https://www.archlinux.org/packages/extra/x86_64/p7zip/)       |
-| [lzop](https://www.lzop.org/)                      | lzop is a file compressor which is very similar to gzip.                                  | [lzop](https://www.archlinux.org/packages/extra/x86_64/lzop/)         |
-| [gzip](https://www.gnu.org/software/gzip/)         | GNU Gzip is a popular data compression program                                            | [gzip](https://www.archlinux.org/packages/core/x86_64/gzip/)          |
-| [bzip2](http://www.sourceware.org/bzip2/)          | bzip2 is a freely available, patent free (see below), high-quality data compressor.       | [bzip2](https://www.archlinux.org/packages/core/x86_64/bzip2/)        |
-| [xz](https://tukaani.org/xz/)                      | XZ Utils is free general-purpose data compression software with a high compression ratio. | [xz](https://www.archlinux.org/packages/core/x86_64/xz/)              |
-| [lzma](https://tukaani.org/xz/)                    | XZ Utils is free general-purpose data compression software with a high compression ratio. | [xz](https://www.archlinux.org/packages/core/x86_64/xz/)              |
-| [unzip](http://infozip.sourceforge.net/UnZip.html) | UnZip is an extraction utility for archives compressed in .zip format                     | [unzip](https://www.archlinux.org/packages/extra/x86_64/unzip/)       |
+| Prerequisites                                      | Description                                                                               | [Arch Packages](https://www.archlinux.org/packages/)                 |
+|----------------------------------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| [tar](https://www.gnu.org/software/tar/)           | create tar archives                                                                       | [tar](https://www.archlinux.org/packages/core/x86_64/tar/)           |
+| [rar](https://www.rarlab.com/)                     | powerful archive manager                                                                  | [rar](https://aur.archlinux.org/packages/rar/)                       |
+| [zip](http://infozip.sourceforge.net/Zip.html)     | compression and file packaging/archive utility                                            | [zip](https://www.archlinux.org/packages/extra/x86_64/zip/)          |
+| [7z](http://p7zip.sourceforge.net/)                | p7zip is a port of 7za.exe for POSIX systems                                              | [p7zip](https://www.archlinux.org/packages/extra/x86_64/p7zip/)      |
+| [lzop](https://www.lzop.org/)                      | lzop is a file compressor which is very similar to gzip.                                  | [lzop](https://www.archlinux.org/packages/extra/x86_64/lzop/)        |
+| [gzip](https://www.gnu.org/software/gzip/)         | GNU Gzip is a popular data compression program                                            | [gzip](https://www.archlinux.org/packages/core/x86_64/gzip/)         |
+| [bzip2](http://www.sourceware.org/bzip2/)          | bzip2 is a freely available, patent free (see below), high-quality data compressor.       | [bzip2](https://www.archlinux.org/packages/core/x86_64/bzip2/)       |
+| [xz](https://tukaani.org/xz/)                      | XZ Utils is free general-purpose data compression software with a high compression ratio. | [xz](https://www.archlinux.org/packages/core/x86_64/xz/)             |
+| [lzma](https://tukaani.org/xz/)                    | XZ Utils is free general-purpose data compression software with a high compression ratio. | [xz](https://www.archlinux.org/packages/core/x86_64/xz/)             |
+| [unzip](http://infozip.sourceforge.net/UnZip.html) | UnZip is an extraction utility for archives compressed in .zip format                     | [unzip](https://www.archlinux.org/packages/extra/x86_64/unzip/)      |
+| [perl-libwww](https://github.com/libwww-perl)      | The World-Wide Web library for Perl                                                       | [perl-libwww](https://archlinux.org/packages/extra/any/perl-libwww/) |
 
+Install `perl-libwww` like this:
+
+```
+sudo pacman -S perl-libwww --asdeps git
+```
 
 ### Automatic Prerequisites
 Following things are installed automatically, via git submodules.
