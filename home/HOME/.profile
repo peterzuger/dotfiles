@@ -12,6 +12,7 @@ export NETRC="${HOME}/.config/netrc"
 export GNUPGHOME="${HOME}/.config/gnupg"
 export PYTHONSTARTUP="${HOME}/.config/python/startup.py"
 export PYLINTHOME="${HOME}/.config/pylint.d"
+export WORKON_HOME="${HOME}/.cache/virtualenvs"
 export DOCKER_CONFIG="${HOME}/.config/docker"
 export ASPELL_CONF="home-dir ${HOME}/.config/aspell"
 export LESSHISTFILE=-
