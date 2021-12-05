@@ -34,33 +34,20 @@ prepare:
 
 	$(MKDIR) $(INSTALL_HOME)/.ssh
 
-.PHONY: headless
+
 headless: prepare
-	$(STOW) --target=$(INSTALL_HOME) --dir=headless HOME
-	$(SSTOW) --target=$(INSTALL_ETC) --dir=headless etc
-
-.PHONY: headless-uninstall
-headless-uninstall:
-	$(STOW) --delete --target=$(INSTALL_HOME) --dir=headless HOME
-	$(SSTOW) --delete --target=$(INSTALL_ETC) --dir=headless etc
-
-.PHONY: common
 common: headless
-	$(STOW) --target=$(INSTALL_HOME) --dir=common HOME
-	$(SSTOW) --target=$(INSTALL_ETC) --dir=common etc
-
-.PHONY: common-uninstall
 common-uninstall: headless-uninstall
-	$(STOW) --delete --target=$(INSTALL_HOME) --dir=common HOME
-	$(SSTOW) --delete --target=$(INSTALL_ETC) --dir=common etc
-
-.PHONY: $(INSTALL_TARGETS)
 $(INSTALL_TARGETS): prepare common
+$(UNINSTALL_TARGETS): common-uninstall
+
+.PHONY: headless common $(INSTALL_TARGETS)
+headless common $(INSTALL_TARGETS):
 	$(STOW) --target=$(INSTALL_HOME) --dir=$@ HOME
 	$(SSTOW) --target=$(INSTALL_ETC) --dir=$@ etc
 
-.PHONY: $(UNINSTALL_TARGETS)
-$(UNINSTALL_TARGETS): common-uninstall
+.PHONY: headless-uninstall common-uninstall $(UNINSTALL_TARGETS)
+headless-uninstall common-uninstall $(UNINSTALL_TARGETS):
 	$(STOW) --delete --target=$(INSTALL_HOME) --dir=$(@:-uninstall=) HOME
 	$(SSTOW) --delete --target=$(INSTALL_ETC) --dir=$(@:-uninstall=) etc
 
