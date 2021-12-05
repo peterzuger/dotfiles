@@ -1,12 +1,12 @@
 [submodule "common/HOME/.liquidprompt"]
-	path = headless/HOME/.config/zsh/liquidprompt
-        url = https://github.com/nojhan/liquidprompt.git
+    path = headless/HOME/.config/zsh/liquidprompt
+    url = https://github.com/nojhan/liquidprompt.git
 [submodule "common/HOME/.ssh-connect"]
-	path = headless/HOME/.config/zsh/ssh-connect
-        url = https://github.com/gko/ssh-connect.git
+    path = headless/HOME/.config/zsh/ssh-connect
+    url = https://github.com/gko/ssh-connect.git
 [submodule "common/HOME/.emacs.d"]
-        path = common/HOME/.emacs.d
-        url = https://github.com/peterzuger/.emacs.d.git
+    path = headless/HOME/.emacs.d
+    url = https://github.com/peterzuger/.emacs.d.git
 [submodule "headless/HOME/zsh-insulter"]
-	path = headless/HOME/.config/zsh/zsh-insulter
-        url = https://github.com/matmutant/zsh-insulter.git
+    path = headless/HOME/.config/zsh/zsh-insulter
+    url = https://github.com/matmutant/zsh-insulter.git
