@@ -10,6 +10,8 @@
         path = mail_config
 [pull]
         ff = only
+[push]
+        default = current
 [init]
         defaultBranch = master
 [advice]
