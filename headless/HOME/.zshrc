@@ -22,11 +22,13 @@ zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit
 compinit -d '$HOME/.config/zsh/zcompdump'
 # End of lines added by compinstall
+
 # Lines configured by zsh-newuser-install
 HISTFILE="$HOME/.config/zsh/histfile"
 HISTSIZE=10000000
 SAVEHIST=10000000
-setopt appendhistory autocd extendedglob nomatch
+setopt appendhistory autocd extendedglob extendedhistory
+setopt histignorespace nomatch
 unsetopt beep notify
 bindkey "^[[3~" delete-char
 bindkey -e
