@@ -232,7 +232,7 @@ To install these dotfiles, just clone the repo, it does not need to
 be in any special folder, just put it where you like.
 The `--recursive` is __required__, otherwise the sub-repository's wont be downloaded.
 ```
-git clone --recursive https://gitlab.com/peterzuger/dotfiles.git
+git clone --recursive https://github.com/peterzuger/dotfiles.git
 cd dotfiles
 ```
 
