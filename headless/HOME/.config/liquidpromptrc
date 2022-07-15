@@ -41,6 +41,8 @@ LP_PATH_LENGTH=35
 # Recommended value is 2
 LP_PATH_KEEP=2
 
+LP_COLOR_PATH_SEPARATOR=""
+
 # Determine if the hostname should always be displayed, even if not connecting
 # through network.
 # Defaults to 0 (do not display hostname when locally connected)
