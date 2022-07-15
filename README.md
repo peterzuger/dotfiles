@@ -212,7 +212,7 @@ Create a a user:
 useradd -m -G wheel uucp peter
 ```
 
-When using docker, wireshark or thor, add the user to the docker,
+When using docker, wireshark or tor, add the user to the docker,
 wireshark and tor groups respectively.
 
 
