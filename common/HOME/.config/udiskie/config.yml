@@ -5,4 +5,4 @@ program_options:
 
 device_config:
 - id_type: btrfs
-  options: [rw, nosuid, nodev, relatime, compress=lzo, space_cache]
+  options: [rw, nosuid, nodev, relatime, compress=zlib:7, space_cache]
