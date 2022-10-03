@@ -1,4 +1,13 @@
 # -*- mode: gdb-script; -*-
+set auto-load safe-path /
+set print pretty on
+set print array on
+set print array-indexes on
+set print object on
+set print vtbl on
+
+set history save on
+set history size unlimited
 
 define peda
   source /usr/share/peda/peda.py
