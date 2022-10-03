@@ -16,3 +16,21 @@ document peda
 Enable Python Exploit Development Assistance for GDB.
 Usage: peda
 end
+
+define xxd
+dump binary memory dump.bin $arg0 $arg0+$arg1
+shell xxd dump.bin
+end
+document xxd
+Call xxd on a region of memory.
+Usage: xxd START LENGTH
+end
+
+define hexdump
+dump binary memory dump.bin $arg0 $arg0+$arg1
+shell hexdump -C dump.bin
+end
+document hexdump
+Call hexdump -C on a region of memory.
+Usage: hexdump START LENGTH
+end
