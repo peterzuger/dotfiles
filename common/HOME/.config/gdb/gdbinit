@@ -1,1 +1,9 @@
-source /usr/share/peda/peda.py
+# -*- mode: gdb-script; -*-
+
+define peda
+  source /usr/share/peda/peda.py
+end
+document peda
+Enable Python Exploit Development Assistance for GDB.
+Usage: peda
+end
