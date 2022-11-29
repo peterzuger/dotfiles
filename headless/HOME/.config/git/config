@@ -17,3 +17,5 @@
     defaultBranch = master
 [advice]
     detachedHead = false
+[notes]
+    rewriteRef = refs/notes/commits
