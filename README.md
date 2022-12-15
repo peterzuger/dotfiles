@@ -280,6 +280,19 @@ If you are already using a Display Manager, this should not be done.
 sudo systemctl enable xdm.service
 ```
 
+for CUPS to find `.local` printers, change the host: line in `/etc/nsswitch.conf` to:
+```
+hosts: mymachines mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] files myhostname dns
+```
+
+this enables `.local` hostname resolution.
+
+To enable printing with CUPS enable the required services:
+```
+sudo systemctl enable avahi-deamon.service
+sudo systemctl enable cups.service
+```
+
 To install these dotfiles, just clone the repo, it does not need to
 be in any special folder, just put it where you like.
 The `--recursive` is __required__, otherwise the sub-repository's wont be downloaded.
