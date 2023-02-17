@@ -7,6 +7,8 @@ terminfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 
 hardstatus alwayslastline
 
+nethack on
+
 hardstatus string '%{= kG}[%H][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{= kG}]'
 
 defscrollback 10000
