@@ -66,13 +66,10 @@ bindkey . rationalise-dot
 # without this, typing a . aborts incremental history search
 bindkey -M isearch . self-insert
 
-# expicitly set feed bookmarks to different directory
-export FEED_BOOKMARKS="$HOME/.config/zsh/newsfeed"
 
 if [[ $- == *i* ]]; then
     [[ -e "$HOME/.config/zsh/liquidprompt/liquidprompt"  ]] && source "$HOME/.config/zsh/liquidprompt/liquidprompt"
     [[ -e "$HOME/.config/zsh/ssh-connect/ssh-connect.sh" ]] && source "$HOME/.config/zsh/ssh-connect/ssh-connect.sh"
-    [[ -e "$HOME/.config/zsh/newsfeed.sh" ]] && source "$HOME/.config/zsh/newsfeed.sh"
     [[ -e "$HOME/.config/zsh/zsh-insulter/src/zsh.command-not-found" ]] && source "$HOME/.config/zsh/zsh-insulter/src/zsh.command-not-found"
     [[ -e "/usr/bin/virtualenvwrapper.sh" ]] && source /usr/bin/virtualenvwrapper.sh
     stty -ixon
