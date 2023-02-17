@@ -1,8 +1,8 @@
 export EMAIL="zueger.peter@icloud.com"
 export NAME="Peter Züger"
 
-export EDITOR="emacs --no-window-system"
-export VISUAL=$EDITOR
+export EDITOR="/usr/bin/emacs --no-window-system"
+export VISUAL="/usr/bin/emacsclient"
 export PAGER=less
 export PATH="$PATH:$HOME/.local/bin"
 
