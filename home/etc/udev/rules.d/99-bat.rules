@@ -1,0 +1,2 @@
+# Creates a notification when the battery percentage drops below 10%
+SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_TYPE}=="Battery", ENV{POWER_SUPPLY_CAPACITY}=="[0-9]", RUN+="/home/peter/.local/bin/battery-notify '$env{POWER_SUPPLY_NAME}' '$env{POWER_SUPPLY_STATUS}' '$env{POWER_SUPPLY_CAPACITY}'"

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+function ns() {
+    local display=":$(ls /tmp/.X11-unix/* | sed 's#/tmp/.X11-unix/X##' | head -n 1)"
+    local user=$(/usr/bin/loginctl --no-legend list-users | awk '{print $2}')
+    local uid=$(id -u $user)
+    sudo --non-interactive --user=$user DISPLAY=$display DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$uid/bus /usr/bin/notify-send "$@"
+}
+
+ns --icon battery-level-10-charging-symbolic.symbolic --urgency=critical "Battery ${1:3} is at $3% ($2)"
