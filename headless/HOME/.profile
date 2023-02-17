@@ -19,7 +19,7 @@ export LESSHISTFILE=-
 export MPY_BAUDRATE=460800
 
 if [ -d "/usr/lib/distcc/bin" ]; then
-    export DISTCC_HOSTS="localhost/8"
+    export DISTCC_HOSTS="localhost/$(getconf _NPROCESSORS_ONLN)"
     export DISTCC_DIR="${HOME}/.config/distcc"
     export CCACHE_PREFIX="distcc"
 fi
