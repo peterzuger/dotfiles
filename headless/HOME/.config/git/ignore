@@ -15,8 +15,9 @@ flycheck_*
 # The following files should be ignored in the respective repository but some
 # don't do that
 
-# generated make dependencies
+# generated make dependencies (only ignore files)
 *.d
+!*.d/
 
 # CircuitPython secrets file
 # WiFi network's SSID and password and other sensitive information
