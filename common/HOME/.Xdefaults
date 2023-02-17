@@ -22,8 +22,8 @@ URxvt.font: xft:DejaVu Sans Mono:style=Regular:pixelsize=14,\
             xft:Noto Sans Mono:style=Regular:pixelsize=14,\
             xft:symbola:style=Regular:pixelsize=10:minspace=False
 
-URxvt.background:     [20]#3f3f3f
-URxvt.foreground:         #dcdccc
+URxvt.background:     [60]#000000
+URxvt.foreground:         #FFFFFF
 URxvt.color0:             #3f3f3f
 URxvt.color1:             #cc9393
 URxvt.color2:             #7f9f7f
@@ -41,15 +41,9 @@ URxvt.color13:            #dc8cc3
 URxvt.color14:            #93e0e3
 URxvt.color15:            #3F3F6A
 URxvt.cursorColor:        #aaaaaa
-!URxvt.cursorColor2:       #
 URxvt.colorUL:            #366060
 URxvt.underlineColor:     #dfaf8f
-URxvt.highlightColor:     #000000
+URxvt.highlightColor:     #202020
 URxvt.highlightTextColor: #FFFFFF
 !URxvt.colorBD:           #
 !URxvt.colorIT:           #
-!URxvt.colorRV:           #
-!URxvt.scrollColor:       #
-!URxvt.troughColor:       #
-!URxvt.pointerColor:      #
-!URxvt.pointerColor2:     #
