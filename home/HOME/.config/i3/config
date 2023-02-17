@@ -39,6 +39,10 @@ bindsym --release $mod+Print       exec --no-startup-id maim --window=$(xdotool 
 bindsym --release $mod+Shift+Print exec --no-startup-id maim --delay=0.05 --quiet --select $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
 bindsym --release Shift+Print      exec --no-startup-id "maim --select | xclip -selection clipboard -t image/png"
 
+bindsym $mod+Ctrl+P  exec --no-startup-id cmus-remote --prev
+bindsym $mod+Shift+P exec --no-startup-id cmus-remote --next
+bindsym $mod+P       exec --no-startup-id cmus-remote --pause
+
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
