@@ -89,8 +89,8 @@ function countdown {
 }
 
 alias ls="/usr/bin/ls --color=always"
-alias ll="/usr/bin/ls -l --classify --human-readable"    # list as list
-alias la="/usr/bin/ls --all --classify"     # show all
-alias lla="/usr/bin/ls -l --all --classify --human-readable"  # list all
-alias lS="/usr/bin/ls -l --classify --human-readable -S"   # list sort by file size
+alias ll="/usr/bin/ls --color=always -l --classify --human-readable"    # list as list
+alias la="/usr/bin/ls --color=always --all --classify"     # show all
+alias lla="/usr/bin/ls --color=always -l --all --classify --human-readable"  # list all
+alias lS="/usr/bin/ls --color=always -l --classify --human-readable -S"   # list sort by file size
 alias emacs=$EDITOR
