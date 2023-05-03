@@ -1,4 +1,4 @@
-# GRUB boot loader configuration
+# GRUB boot loader configuration -*- mode: conf-unix; -*-
 
 GRUB_DEFAULT=0
 GRUB_TIMEOUT=5
