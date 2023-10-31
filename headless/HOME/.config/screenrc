@@ -12,3 +12,7 @@ nethack on
 hardstatus string '%{= kG}[%H][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{= kG}]'
 
 defscrollback 200000
+
+screen -t cmus cmus
+screen -t ranger ranger
+screen -t zsh zsh
