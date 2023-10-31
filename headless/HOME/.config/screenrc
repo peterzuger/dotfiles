@@ -11,4 +11,4 @@ nethack on
 
 hardstatus string '%{= kG}[%H][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{= kG}]'
 
-defscrollback 10000
+defscrollback 200000
