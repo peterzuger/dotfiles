@@ -63,6 +63,34 @@ def bluetooth():
     return {"full_text": "B: down", "name": "Bluetooth", "color": "#FF0000"}
 
 
+def get_cmus_remote():
+    info = {"tag": {}, "set": {}}
+    for line in get_stdout(["cmus-remote", "-Q"]).splitlines():
+        if line == "cmus-remote: cmus is not running":
+            break
+
+        if line.startswith(("status", "duration", "position", "file")):
+            tag, val = line.split(" ", 1)
+            info[tag] = val
+        elif line.startswith(("tag", "set")):
+            kind, tag, val = line.split(" ", 2)
+            info[kind][tag] = val
+    return info
+
+
+@cache_function_for(t=10)
+def cmus():
+    remote = get_cmus_remote()
+    if status := remote.get("status"):
+        if status == "playing":
+            return {
+                "full_text": f'cmus: {remote["tag"].get("title", "no song")}',
+                "name": "cmus",
+            }
+        return {"full_text": f"cmus: {status}", "name": "cmus"}
+    return {"full_text": "", "name": "cmus"}
+
+
 def print_line(message):
     """Non-buffered printing to stdout."""
     sys.stdout.write(message + "\n")
@@ -100,6 +128,7 @@ def main():
 
         j.insert(0, bluetooth())
         j.insert(0, wireguard())
+        j.insert(5, cmus())
 
         print_line(prefix + json.dumps(j))
 
