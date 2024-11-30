@@ -19,3 +19,5 @@
     detachedHead = false
 [notes]
     rewriteRef = refs/notes/commits
+[rerere]
+	enabled = true
