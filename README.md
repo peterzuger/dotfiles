@@ -195,7 +195,6 @@ Following Prerequisites are for my emacs configuration;
 | [global](https://www.gnu.org/software/global/)          | Source code tag system                                            | [global](https://archlinux.org/packages/community/x86_64/global/)          |
 | [go](https://golang.org/)                               | Core compiler tools for the Go programming language               | [go](https://archlinux.org/packages/community/x86_64/go/)                  |
 | [llvm-libs](https://llvm.org/)                          | LLVM runtime libraries                                            | [llvm-libs](https://archlinux.org/packages/extra/x86_64/llvm-libs/)        |
-| [mypy](http://www.mypy-lang.org/)                       | Optional static typing for Python 2 and 3 (PEP484)                | [mypy](https://archlinux.org/packages/community/any/mypy/)                 |
 | [offlineimap](http://offlineimap.org/)                  | Synchronizes emails between two repositories                      | [offlineimap](https://archlinux.org/packages/community/any/offlineimap/)   |
 | [python-black](https://github.com/psf/black)            | Uncompromising Python code formatter                              | [python-black](https://archlinux.org/packages/community/any/python-black/) |
 | [python-pylint](https://pylint.org)                     | Analyzes Python code looking for bugs and signs of poor quality   | [python-pylint](https://archlinux.org/packages/extra/any/python-pylint/)   |
