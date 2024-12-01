@@ -1,4 +1,4 @@
-TARGETS = home
+TARGETS = home legion
 
 ifeq ($(VERBOSE),1)
 	Q =
