@@ -5,6 +5,8 @@
 termcap xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 terminfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 
+termcapinfo xterm* ti@:te@
+
 hardstatus alwayslastline
 
 nethack on
