@@ -5,6 +5,7 @@ RES=$(xrandr --current | grep '\*' | uniq | head -n 1 | awk '{print $1}')
 # RES_X=$(echo "$RES" | cut -d 'x' -f1)
 RES_Y=$(echo "$RES" | cut -d 'x' -f2)
 
+echo "locking at $(date +%Y-%m-%d_%H:%M:%S)"
 i3lock --clock --blur=0\
        --ignore-empty-password\
        --show-failed-attempts\
@@ -30,3 +31,4 @@ i3lock --clock --blur=0\
        --pass-volume-keys\
        --radius=$((RES_Y/10))\
        --nofork
+echo "unlocked at $(date +%Y-%m-%d_%H:%M:%S)"
