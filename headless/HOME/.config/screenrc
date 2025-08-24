@@ -11,6 +11,9 @@ hardstatus alwayslastline
 
 nethack on
 
+bindkey "^[Od" prev  # ctrl-left
+bindkey "^[Oc" next  # ctrl-right
+
 hardstatus string '%{= kG}[%H][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{= kG}]'
 
 defscrollback 200000
