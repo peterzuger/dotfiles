@@ -1,4 +1,5 @@
 Xft.dpi: 96
+! Xft.dpi: 236
 URxvt.termName:        xterm-256color
 URxvt.scrollBar:       false
 URxvt.saveLines:       0
@@ -18,10 +19,20 @@ URxvt.keysym.C-slash:  font-size:show
 URxvt.xftAntialias:    true
 URxvt.depth:           32
 URxvt.letterSpace:     0
+
+#if defined(HOME)
 URxvt.font: xft:DejaVu Sans Mono:style=Regular:pixelsize=14,\
             xft:Noto Sans CJK JP:style=Regular:pixelsize=14,\
             xft:Noto Sans Mono:style=Regular:pixelsize=14,\
             xft:symbola:style=Regular:pixelsize=10:minspace=False
+#elif defined(LEGION)
+URxvt.font: xft:DejaVu Sans Mono:style=Regular:pixelsize=20,\
+            xft:Noto Sans CJK JP:style=Regular:pixelsize=20,\
+            xft:Noto Sans Mono:style=Regular:pixelsize=20,\
+            xft:symbola:style=Regular:pixelsize=20:minspace=False
+#else
+#error "unknown machine"
+#endif
 
 URxvt.background:     [60]#000000
 URxvt.foreground:         #FFFFFF
