@@ -18,6 +18,6 @@ hardstatus string '%{= kG}[%H][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{=
 
 defscrollback 200000
 
-screen -t cmus cmus
-screen -t ranger ranger
-screen -t zsh zsh
+# screen -t cmus cmus
+# screen -t ranger ranger
+# screen -t zsh zsh
