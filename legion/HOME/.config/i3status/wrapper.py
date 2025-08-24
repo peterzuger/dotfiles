@@ -91,6 +91,21 @@ def cmus():
     return {"full_text": "", "name": "cmus"}
 
 
+microphone_re = re.compile(r"(?:Mute:)\s+(.*)")
+
+
+def get_microphone_active():
+    return "no" in microphone_re.findall(
+        get_stdout(["pactl", "get-source-mute", "@DEFAULT_SOURCE@"])
+    )
+
+
+@cache_function_for(t=5)
+def microphone():
+    color = "#00FF00" if get_microphone_active() else "#FF0000"
+    return {"full_text": "", "name": "microphone", "color": color}
+
+
 def print_line(message):
     """Non-buffered printing to stdout."""
     sys.stdout.write(message + "\n")
@@ -129,6 +144,7 @@ def main():
         j.insert(0, bluetooth())
         j.insert(0, wireguard())
         j.insert(5, cmus())
+        j.insert(4, microphone())
 
         print_line(prefix + json.dumps(j))
 
