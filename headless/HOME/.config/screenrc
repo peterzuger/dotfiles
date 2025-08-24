@@ -11,6 +11,8 @@ hardstatus alwayslastline
 
 nethack on
 
+defutf8 on
+
 bindkey "^[Od" prev  # ctrl-left
 bindkey "^[Oc" next  # ctrl-right
 
