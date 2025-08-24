@@ -47,6 +47,8 @@ bindsym $mod+P              exec --no-startup-id cmus-remote --pause
 bindsym $mod+Shift+S        exec --no-startup-id screenkey --no-systray --mouse --mods-mode emacs --scr $(xdotool get_desktop)
 bindsym $mod+Shift+D        exec --no-startup-id pkill screenkey
 
+bindsym Shift+XF86TouchpadOff exec rofi -show calc
+
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
