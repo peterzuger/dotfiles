@@ -1,7 +1,11 @@
 #!/usr/bin/env sh
 set -euo pipefail
 
-i3lock -k -B=0\
+RES=$(xrandr --current | grep '\*' | uniq | head -n 1 | awk '{print $1}')
+# RES_X=$(echo "$RES" | cut -d 'x' -f1)
+RES_Y=$(echo "$RES" | cut -d 'x' -f2)
+
+i3lock --clock --blur=0\
        --ignore-empty-password\
        --show-failed-attempts\
        --date-str="%d %m %Y"\
@@ -20,4 +24,4 @@ i3lock -k -B=0\
        --time-color=F6F3E8FF\
        --date-color=F6F3E8FF\
        --indicator\
-       --radius=100
+       --radius=$((RES_Y/10))
