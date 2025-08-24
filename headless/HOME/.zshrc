@@ -93,4 +93,7 @@ alias ll="/usr/bin/ls --color=always -l --classify --human-readable"    # list a
 alias la="/usr/bin/ls --color=always --all --classify"     # show all
 alias lla="/usr/bin/ls --color=always -l --all --classify --human-readable"  # list all
 alias lS="/usr/bin/ls --color=always -l --classify --human-readable -S"   # list sort by file size
+alias diff="diff --color=auto"
+alias grep="grep --color=auto"
+alias ip='ip -color=auto'
 alias emacs=$EDITOR
