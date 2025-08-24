@@ -19,7 +19,7 @@ order += "disk /home/"
 order += "disk /"
 order += "load"
 order += "memory"
-order += "battery"
+order += "battery 1"
 order += "tztime local"
 
 wireless _first_ {
@@ -51,7 +51,7 @@ memory {
     format = "mem: %available (%percentage_used) ]"
     threshold_degraded = "10%"
 }
-battery {
+battery 1 {
     last_full_capacity = true
     format = "%status %percentage %remaining %emptytime"
     format_down = ""
