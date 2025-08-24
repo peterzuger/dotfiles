@@ -1,6 +1,8 @@
 configuration {
-    modi: "combi#run#window#ssh#calc";
-    sidebar-mode: true;
+    modi: "combi#run#window";
+    dpi: 1;
     matching: "fuzzy";
+    window-format: "{w} {t:0}";
+    combi-hide-mode-prefix: true;
 }
-@theme "/usr/share/rofi/themes/glue_pro_blue.rasi"
+@theme "/usr/share/rofi/themes/arthur.rasi"
