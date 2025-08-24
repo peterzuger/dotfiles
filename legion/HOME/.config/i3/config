@@ -21,11 +21,11 @@ bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute   @DEFAUL
 bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioMicMute      exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessDown exec --no-startup-id backlight.py --dec 10
+bindsym XF86MonBrightnessUp   exec --no-startup-id backlight.py --inc 10
 bindsym XF86AudioPrev         exec --no-startup-id cmus-remote --prev
 bindsym XF86AudioNext         exec --no-startup-id cmus-remote --next
 bindsym XF86AudioPlay         exec --no-startup-id cmus-remote --pause
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight - 10
-bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight + 10
 bindsym XF86Display           exec --no-startup-id $HOME/.local/bin/xautolock-toggle
 bindsym XF86WLAN              exec --no-startup-id $HOME/.local/bin/wireless-show
 #bindsym XF86Tools
