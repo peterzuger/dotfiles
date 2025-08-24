@@ -25,3 +25,7 @@ i3lock --clock --blur=0\
        --date-color=F6F3E8FF\
        --indicator\
        --radius=$((RES_Y/10))
+       --pass-media-keys\
+       --pass-screen-keys\
+       --pass-power-keys\
+       --pass-volume-keys\
