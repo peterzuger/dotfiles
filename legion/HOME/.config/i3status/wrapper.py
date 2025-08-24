@@ -40,7 +40,7 @@ def get_wg_interfaces():
     return get_stdout(["wg", "show", "interfaces"]).strip()
 
 
-@cache_function_for(t=10)
+@cache_function_for(t=5)
 def wireguard():
     interfaces = get_wg_interfaces()
     if interfaces:
@@ -56,7 +56,7 @@ def get_bluetooth_status():
     return "yes" in btctl_re.findall(get_stdout(["bluetoothctl", "show"]))
 
 
-@cache_function_for(t=10)
+@cache_function_for(t=5)
 def bluetooth():
     if get_bluetooth_status():
         return {"full_text": "B: up", "name": "Bluetooth", "color": "#00FF00"}
@@ -78,7 +78,7 @@ def get_cmus_remote():
     return info
 
 
-@cache_function_for(t=10)
+@cache_function_for(t=5)
 def cmus():
     remote = get_cmus_remote()
     if status := remote.get("status"):
