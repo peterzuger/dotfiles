@@ -144,7 +144,7 @@
 
     ### Text ###
 
-    font = Monospace 20
+    font = Monospace 14
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -235,7 +235,7 @@
     min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 128
+    max_icon_size = 32
 
     # Paths to default icons (only necessary when not using recursive icon lookup)
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
