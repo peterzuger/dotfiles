@@ -96,4 +96,5 @@ alias lS="/usr/bin/ls --color=always -l --classify --human-readable -S"   # list
 alias diff="diff --color=auto"
 alias grep="grep --color=auto"
 alias ip='ip -color=auto'
+alias tree='tree --gitignore'
 alias emacs=$EDITOR
