@@ -17,6 +17,7 @@ export ASPELL_CONF="home-dir ${HOME}/.config/aspell"
 export LESSHISTFILE=-
 export VOLK_CONFIGPATH="${HOME}/.config"
 export W3M_DIR="${HOME}/.config/w3m"
+export ZDOTDIR="$HOME/.config/zsh"
 
 export MPY_BAUDRATE=460800
 
