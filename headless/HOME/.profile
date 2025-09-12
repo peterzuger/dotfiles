@@ -8,9 +8,12 @@ export PATH="$PATH:$HOME/.local/bin"
 
 export PASSWORD_STORE_DIR="${HOME}/.config/password-store"
 export SCREENRC="${HOME}/.config/screenrc"
+export SCREENDIR="${XDG_RUNTIME_DIR}/screen"
 export NETRC="${HOME}/.config/netrc"
 export GNUPGHOME="${HOME}/.config/gnupg"
+export GDBHISTFILE="${HOME}/.config/gdb/history"
 export PYTHONSTARTUP="${HOME}/.config/python/startup.py"
+export PYTHON_HISTORY="${HOME}/.config/python/history"
 export WORKON_HOME="${HOME}/.cache/virtualenvs"
 export DOCKER_CONFIG="${HOME}/.config/docker"
 export ASPELL_CONF="home-dir ${HOME}/.config/aspell"
@@ -18,6 +21,7 @@ export LESSHISTFILE=-
 export VOLK_CONFIGPATH="${HOME}/.config"
 export W3M_DIR="${HOME}/.config/w3m"
 export ZDOTDIR="$HOME/.config/zsh"
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="${HOME}/.config/java"
 
 export MPY_BAUDRATE=460800
 
