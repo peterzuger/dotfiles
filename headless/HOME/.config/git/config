@@ -6,6 +6,7 @@
 	stashes = submodule foreach --recursive git stash list
 	contributors = ! git log --format='%aN' -- "$GIT_PREFIX" | sort | uniq --count | sort --ignore-leading-blanks --numeric-sort --reverse
 	mirror = ! BRANCH=$(git branch --show-current) && git checkout `git rev-parse HEAD` && git fetch origin "+refs/heads/*:refs/heads/*" && git checkout "$BRANCH"
+	graph = log --pretty=medium --decorate --graph
 [include]
 	path = ext_config
 	path = mail_config
