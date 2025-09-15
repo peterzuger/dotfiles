@@ -1,0 +1,15 @@
+# Explicitly exclude some directories without recursing into them
+! re:^(proc|sys|dev|run|tmp|mnt)
+
+# home is backed up separately
+! re:^(home)
+
+# exclude root user cache
+! root/.cache
+! root/.config/borg
+
+# can be downloaded from the ALPA
+! var/cache/pacman/pkg
+
+# don't have any important docker containers
+- var/lib/docker

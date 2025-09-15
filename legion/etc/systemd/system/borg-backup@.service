@@ -1,0 +1,43 @@
+[Unit]
+Description=borg-backup to %i
+ConditionACPower=true
+
+[Service]
+Type=oneshot
+# User=borg
+# ExecStart=systemd-inhibit --who="borg" --what="sleep:shutdown" --why="Backup" /etc/borg-backup/backup.sh %i
+ExecStart=/etc/borg-backup/backup.sh %i
+Restart=no
+# DynamicUser=true
+
+# borg lock/cache files
+ReadWritePaths=/root/.cache/borg
+ReadWritePaths=/root/.config/borg
+
+LoadCredentialEncrypted=borg-pass-%i
+
+AmbientCapabilities=CAP_DAC_READ_SEARCH
+DevicePolicy=closed
+LockPersonality=yes
+NoNewPrivileges=yes
+PrivateDevices=yes
+PrivateTmp=yes
+ProtectClock=yes
+ProtectControlGroups=yes
+ProtectHome=read-only
+ProtectHostname=yes
+ProtectKernelLogs=yes
+ProtectKernelModules=yes
+ProtectKernelTunables=yes
+ProtectProc=invisible
+ProtectSystem=full
+RemoveIPC=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+SystemCallFilter=@system-service
+UMask=7007
+
+[Install]
+WantedBy=default.target

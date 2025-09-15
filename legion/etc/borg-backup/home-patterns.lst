@@ -1,0 +1,20 @@
+# Exclude these files everywhere
+- **/*.iso
+- **/*.mpy
+- **/*.o
+- **/*.pyc
+- **/.DS_Store
+- **/GPATH
+- **/GRTAGS
+- **/GTAGS
+
+# be carefull when excluding *.d
+# sh:**/*.d
+
+# exclude generated dirs
+! **/__pycache__
+! **/node_modules
+
+# exclude cache
+- home/*/.cache
+# - home/*/Downloads # excluded outside
