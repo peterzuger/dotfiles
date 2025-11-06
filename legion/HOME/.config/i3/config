@@ -9,6 +9,8 @@ exec --no-startup-id feh --bg-fill "$(wallpaper)"
 
 for_window [class="^.*"] border pixel 0
 for_window [class="(?i)mpv"] floating enable, sticky enable
+for_window [title="Picture-in-Picture"] floating enable, sticky enable
+
 gaps inner 5
 gaps outer 5
 smart_gaps on
