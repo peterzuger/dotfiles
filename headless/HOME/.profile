@@ -39,3 +39,8 @@ export GOPATH="${HOME}/.config/go"
 if [ -d "${GOPATH}" ]; then
     export PATH="${PATH}:${GOPATH}/bin"
 fi
+
+export CARGO_HOME="${HOME}/.config/cargo"
+if [ -d "${CARGO_HOME}" ]; then
+    export PATH="${PATH}:${CARGO_HOME}/bin"
+fi
