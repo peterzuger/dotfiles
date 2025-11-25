@@ -5,7 +5,14 @@ Description=Lock the screen automatically after a timeout
 Type=simple
 Environment=DISPLAY=:0
 ExecStartPre=/bin/sleep 10
-ExecStart=/usr/bin/xautolock -detectsleep -noclose -corners --00 -time 5 -locker %h/.config/i3lock/locker.sh -killtime 10 -killer %h/.config/i3lock/killer.sh
+ExecStart=xautolock -detectsleep -noclose \
+                    -corners --00 \
+                    -notify 15 \
+                    -notifier "%h/.config/i3lock/notify.sh" \
+                    -time 5 \
+                    -locker "%h/.config/i3lock/locker.sh" \
+                    -killtime 10 \
+                    -killer "%h/.config/i3lock/killer.sh"
 Restart=on-failure
 RestartSec=60
 
