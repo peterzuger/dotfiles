@@ -29,7 +29,8 @@ URxvt.font: xft:DejaVu Sans Mono:style=Regular:pixelsize=14,\
 URxvt.font: xft:DejaVu Sans Mono:style=Regular:pixelsize=20,\
             xft:Noto Sans CJK JP:style=Regular:pixelsize=20,\
             xft:Noto Sans Mono:style=Regular:pixelsize=20,\
-            xft:symbola:style=Regular:pixelsize=20:minspace=False
+            xft:symbola:style=Regular:pixelsize=20:minspace=False,\
+            xft:TerminessNerdFontMono:style=Regular:pixelsize=20
 #else
 #error "unknown machine"
 #endif
