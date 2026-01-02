@@ -17,7 +17,7 @@ zstyle ':completion:*' old-list never
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' substitute 1
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '$HOME/.zshrc'
+zstyle :compinstall filename '$HOME/confg/zsh/.zshrc'
 
 autoload -Uz compinit
 compinit -d '$HOME/.config/zsh/zcompdump'
