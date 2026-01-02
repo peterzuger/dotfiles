@@ -11,5 +11,6 @@
 # can be downloaded from the ALPA
 ! var/cache/pacman/pkg
 
-# don't have any important docker containers
+# don't have any important docker containers or llm images
 - var/lib/docker
+- var/lib/ollama
