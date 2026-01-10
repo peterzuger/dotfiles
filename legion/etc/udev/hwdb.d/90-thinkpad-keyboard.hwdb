@@ -1,0 +1,2 @@
+evdev:input:b0019v0000p0000e0000*
+ KEYBOARD_KEY_101=bookmarks
