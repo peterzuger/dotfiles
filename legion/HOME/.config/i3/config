@@ -30,26 +30,17 @@ bindsym XF86AudioNext         exec --no-startup-id cmus-remote --next
 bindsym XF86AudioPlay         exec --no-startup-id cmus-remote --pause
 bindsym XF86Display           exec --no-startup-id $HOME/.local/bin/xautolock-toggle
 bindsym XF86RFKill            exec --no-startup-id $HOME/.local/bin/wireless-show
-# bindsym XF86Tools
 bindsym XF86Bluetooth         exec --no-startup-id $HOME/.local/bin/bluetooth-show
 bindsym XF86Calculator        exec --no-startup-id rofi -show calc
-# Fn-F11 ?
-# bindsym XF86Favorites
-# bindsym XF86Sleep
 
 bindsym --release Print            exec --no-startup-id maim $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
 bindsym --release $mod+Print       exec --no-startup-id maim --window=$(xdotool getactivewindow) $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
 bindsym --release $mod+Shift+Print exec --no-startup-id maim --delay=0.05 --quiet --select $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
 bindsym --release Shift+Print      exec --no-startup-id "maim --select | xclip -selection clipboard -t image/png"
 
-bindsym $mod+udiaeresis     exec --no-startup-id cmus-remote --prev
-bindsym $mod+dead_diaeresis exec --no-startup-id cmus-remote --next
-bindsym $mod+P              exec --no-startup-id cmus-remote --pause
-
 bindsym $mod+Shift+S        exec --no-startup-id screenkey --no-systray --mouse --mods-mode emacs --scr $(xdotool get_desktop)
 bindsym $mod+Shift+D        exec --no-startup-id pkill screenkey
 
-bindsym Shift+XF86TouchpadOff exec rofi -show calc
 
 # i3 config file (v4)
 #
