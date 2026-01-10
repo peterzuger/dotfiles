@@ -19,19 +19,29 @@ bindsym $mod+L                exec --no-startup-id xautolock -locknow
 
 bindsym $mod+U                exec --no-startup-id udiskie-umount --all
 
+# function keys Fn+(F1-F12)
 bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@ toggle
 bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioMicMute      exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec --no-startup-id backlight.py --dec 10
 bindsym XF86MonBrightnessUp   exec --no-startup-id backlight.py --inc 10
+bindsym $mod+P                exec --no-startup-id xautolock-toggle
+bindsym XF86RFKill            exec --no-startup-id wireless-show
+# bindsym XF86Favorites         exec --no-startup-id notify-send "Fn+F9"
+bindsym XF86TouchpadOff       exec --no-startup-id notify-send --icon="touch-disabled-symbolic" "Touchpad Off"
+bindsym XF86TouchpadOn        exec --no-startup-id notify-send --icon="input-touchpad-symbolic" "Touchpad On"
+# bindsym Mod1+Ctrl+Tab         exec --no-startup-id notify-send "Fn+F11"
+bindsym XF86Calculator        exec --no-startup-id rofi -show calc
+
+# audio keys
+bindsym XF86AudioPause        exec --no-startup-id cmus-remote --pause
+bindsym XF86AudioStop         exec --no-startup-id cmus-remote --stop
 bindsym XF86AudioPrev         exec --no-startup-id cmus-remote --prev
 bindsym XF86AudioNext         exec --no-startup-id cmus-remote --next
-bindsym XF86AudioPlay         exec --no-startup-id cmus-remote --pause
-bindsym XF86Display           exec --no-startup-id $HOME/.local/bin/xautolock-toggle
-bindsym XF86RFKill            exec --no-startup-id $HOME/.local/bin/wireless-show
-bindsym XF86Bluetooth         exec --no-startup-id $HOME/.local/bin/bluetooth-show
-bindsym XF86Calculator        exec --no-startup-id rofi -show calc
+
+# Copilot-Key
+bindsym $mod+Shift+XF86Assistant   exec --no-startup-id notify-send "XF86Assistant"
 
 bindsym --release Print            exec --no-startup-id maim $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
 bindsym --release $mod+Print       exec --no-startup-id maim --window=$(xdotool getactivewindow) $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
