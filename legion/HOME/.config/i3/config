@@ -42,7 +42,7 @@ bindsym XF86AudioNext         exec --no-startup-id cmus-remote --next
 
 # Copilot-Key
 bindsym $mod+Shift+XF86Assistant   exec --no-startup-id \
-    emacsclient --alternate-editor="true" --suppress-output --quiet --eval '(gptel "*Ollama*" nil nil t)'; \
+    emacsclient --alternate-editor="true" --suppress-output --quiet --eval '(switch-to-buffer (gptel "*Ollama*"))'; \
     [class="Emacs"] focus
 
 bindsym --release Print            exec --no-startup-id maim $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
