@@ -7,6 +7,7 @@ export PAGER=less
 export PATH="$PATH:$HOME/.local/bin"
 
 export PASSWORD_STORE_DIR="${HOME}/.config/password-store"
+export INPUTRC="${HOME}/.config/inputrc"
 export SCREENRC="${HOME}/.config/screenrc"
 export SCREENDIR="${XDG_RUNTIME_DIR}/screen"
 export NETRC="${HOME}/.config/netrc"
