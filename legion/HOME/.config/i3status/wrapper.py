@@ -9,23 +9,6 @@ import sys
 import time
 
 
-def cache_function_for(t=60):
-    cache = {}
-
-    def inner(function):
-        def wrapper(*args):
-            h = hash(args)
-            if h in cache and cache[h].get("valid_until") >= time.time():
-                return cache[h].get("value")
-            rv = function(*args)
-            cache[h] = {"value": rv, "valid_until": time.time() + t}
-            return rv
-
-        return wrapper
-
-    return inner
-
-
 def get_stdout(args):
     try:
         return subprocess.run(
@@ -40,7 +23,6 @@ def get_wg_interfaces():
     return get_stdout(["wg", "show", "interfaces"]).strip()
 
 
-@cache_function_for(t=5)
 def wireguard():
     interfaces = get_wg_interfaces()
     if interfaces:
@@ -56,7 +38,6 @@ def get_bluetooth_status():
     return "yes" in btctl_re.findall(get_stdout(["bluetoothctl", "show"]))
 
 
-@cache_function_for(t=5)
 def bluetooth():
     if get_bluetooth_status():
         return {"full_text": "B: up", "name": "Bluetooth", "color": "#00FF00"}
@@ -78,7 +59,6 @@ def get_cmus_remote():
     return info
 
 
-@cache_function_for(t=5)
 def cmus():
     remote = get_cmus_remote()
     if status := remote.get("status"):
@@ -100,7 +80,6 @@ def get_microphone_active():
     )
 
 
-@cache_function_for(t=5)
 def microphone():
     color = "#00FF00" if get_microphone_active() else "#FF0000"
     return {"full_text": "", "name": "microphone", "color": color}
