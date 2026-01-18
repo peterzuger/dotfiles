@@ -12,8 +12,8 @@ import time
 def get_stdout(args):
     try:
         return subprocess.run(
-            args, capture_output=True, timeout=0.1, check=True
-        ).stdout.decode()
+            args, stdout=subprocess.PIPE, timeout=0.1, text=True, check=True
+        ).stdout
     except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
         return ""
 
