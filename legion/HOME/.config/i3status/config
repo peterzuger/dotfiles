@@ -17,6 +17,7 @@ order += "ipv6"
 order += "volume master"
 order += "disk /home/"
 order += "disk /"
+order += "cpu_usage"
 order += "load"
 order += "memory"
 order += "battery 1"
@@ -43,12 +44,14 @@ disk "/" {
     low_threshold = 10
     threshold_type = "percentage_free"
 }
+cpu_usage {
+    format = "CPU: %usage"
+}
 load {
-    format = "[ load: 1m:%1min, 5m:%5min, 15m:%15min"
-    separator = false
+    format = "load: 1m:%1min, 5m:%5min"
 }
 memory {
-    format = "mem: %available (%percentage_used) ]"
+    format = "mem: %available (%percentage_used)"
     threshold_degraded = "10%"
 }
 battery 1 {
