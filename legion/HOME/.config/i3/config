@@ -45,10 +45,10 @@ bindsym $mod+Shift+XF86Assistant   exec --no-startup-id \
     emacsclient --alternate-editor="true" --suppress-output --quiet --eval '(switch-to-buffer (gptel "*Ollama*"))'; \
     [class="Emacs"] focus
 
-bindsym --release Print            exec --no-startup-id maim $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
-bindsym --release $mod+Print       exec --no-startup-id maim --window=$(xdotool getactivewindow) $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
-bindsym --release $mod+Shift+Print exec --no-startup-id maim --delay=0.05 --quiet --select $HOME/Pictures/Screenshot/`date +%Y-%m-%d_%H:%M:%S`.png
-bindsym --release Shift+Print      exec --no-startup-id "maim --select | xclip -selection clipboard -t image/png"
+bindsym --release Print            exec --no-startup-id screenshot.sh
+bindsym --release $mod+Print       exec --no-startup-id screenshot.sh --active
+bindsym --release $mod+Shift+Print exec --no-startup-id screenshot.sh --interactive
+bindsym --release Shift+Print      exec --no-startup-id screenshot.sh --clipboard
 
 bindsym $mod+Shift+S        exec --no-startup-id screenkey --no-systray --mouse --mods-mode emacs --scr $(xdotool get_desktop)
 bindsym $mod+Shift+D        exec --no-startup-id pkill screenkey
