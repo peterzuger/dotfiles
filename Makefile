@@ -23,9 +23,12 @@ all: help
 prepare:
 	$(MKDIR) $(INSTALL_HOME)/.config/aspell
 	$(MKDIR) $(INSTALL_HOME)/.config/distcc
+	$(MKDIR) $(INSTALL_HOME)/.config/gdb
 	$(MKDIR) $(INSTALL_HOME)/.config/git
 	$(MKDIR) $(INSTALL_HOME)/.config/gnupg
 	$(MKDIR) $(INSTALL_HOME)/.config/offlineimap
+	$(MKDIR) $(INSTALL_HOME)/.config/python
+	$(MKDIR) $(INSTALL_HOME)/.config/rtorrent
 	$(MKDIR) $(INSTALL_HOME)/.config/systemd/user
 	$(MKDIR) $(INSTALL_HOME)/.config/zsh
 
