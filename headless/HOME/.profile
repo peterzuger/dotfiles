@@ -1,6 +1,10 @@
 export EMAIL="zueger.peter@icloud.com"
 export NAME="Peter Züger"
 
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+
 export EDITOR="/usr/bin/emacs --no-window-system"
 export VISUAL="/usr/bin/emacsclient"
 export PAGER=less
