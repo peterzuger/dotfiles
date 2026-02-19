@@ -49,3 +49,9 @@ export CARGO_HOME="${HOME}/.config/cargo"
 if [ -d "${CARGO_HOME}" ]; then
     export PATH="${PATH}:${CARGO_HOME}/bin"
 fi
+
+export NUGET_PACKAGES="${HOME}/.cache/nuget"
+export DOTNET_CLI_HOME="${HOME}/.config"
+if [ -d "${DOTNET_CLI_HOME}/.dotnet" ]; then
+    export PATH="${PATH}:${DOTNET_CLI_HOME}/.dotnet/tools"
+fi
