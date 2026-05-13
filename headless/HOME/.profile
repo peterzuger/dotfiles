@@ -26,6 +26,7 @@ export LESSHISTFILE=-
 export VOLK_CONFIGPATH="${HOME}/.config"
 export W3M_DIR="${HOME}/.config/w3m"
 export ZDOTDIR="$HOME/.config/zsh"
+export CUDA_CACHE_PATH="${HOME}/.cache/nv"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="${HOME}/.config/java"
 
 export MPY_BAUDRATE=460800
