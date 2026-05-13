@@ -23,6 +23,8 @@ backup-create() {
     borg create \
          --stats \
          --show-rc \
+         --list \
+         --filter=x \
          --one-file-system \
          --compression zlib,6 \
          --remote-path=borg-1.4 \
