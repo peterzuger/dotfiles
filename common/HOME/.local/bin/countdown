@@ -1,0 +1,89 @@
+#!/usr/bin/env python
+# -*- mode: python; -*-
+import argparse
+from datetime import timedelta, datetime as dt
+import re
+import time
+
+
+def time_string(string):
+    unit_to_seconds = {
+        "ms": 0.001,
+        "s": 1,
+        "m": 60,
+        "h": 3600,
+        "d": 86400,
+    }
+    matches = re.findall(r"(\d+\.?\d*)\s*([a-zA-Z]+)", string)
+
+    seconds = 0.0
+    for num_str, unit in matches:
+        num = float(num_str)
+        if unit not in unit_to_seconds:
+            raise ValueError(f"Invalid time unit: {unit}")
+        seconds += num * unit_to_seconds[unit]
+
+    if not matches:
+        seconds = float(string)
+
+    if 0.001 >= seconds >= 86400:
+        raise ValueError("Time must be between 0.001 seconds and 86400 seconds (1 day)")
+    return seconds
+
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(
+        description="""Start a countdown timer with the specified Time.
+If no time is specified a stopwatch is started."""
+    )
+
+    parser.add_argument(
+        "time",
+        help="how long should the timer be.",
+        type=time_string,
+        nargs="?",
+        default=None,
+    )
+
+    return parser.parse_args()
+
+
+def format_td(td):
+    return f"{td}"[:-5]
+
+
+def countdown(t):
+    td = timedelta(seconds=t)
+    end = dt.now() + td
+
+    try:
+        while end > dt.now():
+            print(f"{ format_td(end - dt.now()) }\r", end="")
+            time.sleep(0.05)
+        print(f"Time is up: { format_td(td) }")
+    except KeyboardInterrupt:
+        print(f"\r{ format_td(end - dt.now()) }")
+
+
+def stopwatch():
+    start = dt.now()
+
+    try:
+        while True:
+            print(f"{ format_td(dt.now() - start) }\r", end="")
+            time.sleep(0.05)
+    except KeyboardInterrupt:
+        print(f"\r{ format_td(dt.now() - start) }")
+
+
+def main():
+    args = parse_arguments()
+
+    if args.time:
+        countdown(args.time)
+    else:
+        stopwatch()
+
+
+if __name__ == "__main__":
+    main()

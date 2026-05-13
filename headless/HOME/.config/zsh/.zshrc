@@ -85,14 +85,6 @@ if [[ $- == *i* ]]; then
     stty -ixon
 fi
 
-function countdown {
-    date1=$((`date +%s` + $1));
-    while [ "$date1" -ge `date +%s` ]; do
-        echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
-        sleep 0.1
-    done
-}
-
 alias ls="/usr/bin/ls --color=always"
 alias ll="/usr/bin/ls --color=always -l --classify --human-readable"    # list as list
 alias la="/usr/bin/ls --color=always --all --classify"     # show all
