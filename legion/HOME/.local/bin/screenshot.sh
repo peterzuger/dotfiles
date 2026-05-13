@@ -17,13 +17,13 @@ function ns() {
 if [[ $# -gt 0 ]]; then
    case "$1" in
        --active)
-           maim --window="$(xdotool getactivewindow)" "$FILENAME"
-           ns "$FILENAME"
+           maim --window="$(xdotool getactivewindow)" "$FILE"
+           ns "$FILE"
            ;;
 
        --interactive)
-           maim --select "$FILENAME"
-           ns "$FILENAME"
+           maim --select "$FILE"
+           ns "$FILE"
            ;;
 
        --clipboard)
@@ -36,6 +36,6 @@ if [[ $# -gt 0 ]]; then
            ;;
    esac
 else
-    maim "$FILENAME"
-    ns "$FILENAME"
+    maim "$FILE"
+    ns "$FILE"
 fi
