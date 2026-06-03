@@ -6,7 +6,7 @@ RES=$(xrandr --current | grep '\*' | uniq | head -n 1 | awk '{print $1}')
 RES_Y=$(echo "$RES" | cut -d 'x' -f2)
 
 echo "locking at $(date +%Y-%m-%d_%H:%M:%S)"
-i3lock --clock --blur=0\
+i3lock --clock --blur=6\
        --ignore-empty-password\
        --show-failed-attempts\
        --date-str="%d %m %Y"\
